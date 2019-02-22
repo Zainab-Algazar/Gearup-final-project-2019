@@ -7,42 +7,64 @@
     <title>Mazaj-Home page</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="home-page.css">
+  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 </head>
 <body>
     <header>
-        <h3>Company</h3>
+        <h1>Mazaj</h1>
+        <img src="photo.png" alt="">
         <nav>
             <ul>
-                <li><a href="">About us</a></li>
-                <li><a href="">Careers</a></li>
-                <li><a href="">Terms</a></li>
-                <li><a href="">Privacy</a></li>
-                <li><a href="">Help</a></li>
-            </ul>  
-        </nav>
-        <h3>Work with us</h3>
-        <nav>
-            <ul>
-                <li><a href="">Authors</a></li>
-                <li><a href="">Advertise</a></li>
-                <li><a href="">Author & ads blog</a></li>
-                <li><a href="">API</a></li>
+                <li><a class="search-icon"href="">Search</i></a></li>
+                <li><a class="login-icon"href="">Log in</a></li>
+                <li><a class="cart-icon" href="">Cart</a></li>
             </ul>
+            <form action="">
+                <fieldset>
+                    <label for="search"></label>
+                    <input type="text" name="search" placeholder="What are you looking for?">
+                    <a href="" role="button"></a>
+                </fieldset>
+            </form>
         </nav>
-        <h3>Fun with us</h3>
-        <nav>
-            <ul>
-                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href=""><i class="fab fa-instagram"></i></li>
-                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
-        </nav>
-        <p> Copyright © 2019 Mazaj All rights reserved </p>
     </header>
-    <footer></footer>
+    <footer>
+        <!--  -->
+        <div class="nav-footer-col">
+            <h3>Company</h3>
+            <nav>
+                <ul class="footer-list">
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="nav-footer-col">
+            <h3>Customer care</h3>
+            <nav>
+                <ul>
+                    <li><a href="">Reviews</a></li>
+                    <li><a href="">Return policy</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul> 
+            </nav>
+        </div>
+        <div class="nav-footer-col">
+            <h3>Follow us</h3>
+            <nav>
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube-square"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <p>Copyright 2019 Majaz some rights reserved </p>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="home-page.js"></script>
