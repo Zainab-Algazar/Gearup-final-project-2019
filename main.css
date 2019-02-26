@@ -1,72 +1,54 @@
-html {
+html{
     box-sizing: border-box;
 }
 *{
     box-sizing: inherit;
     /* border: 1px solid red; */
 }
-
-body{
-    font-family: "" ;
-    margin: 0;
+body>header, footer{
+    background-color:#f0cfc6;
+    color: #77635c;
 }
-
-header{
-    position: relative;
+body>header{
+    height: 25%;
 }
 footer{
-    position: fixed;
-    bottom: 0;
+    /* used to set the footer at the end of web page*/
+    position: fixed;   
+    bottom: 0;      
     width: 100%;
 }
-header, footer{
-    background-color: black;
-    color: white;
-    font-weight: bold;
-}
-h1{
-    color:#c0c4ce;
-    display: none;
-}
-h1+img{
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-}
-
-ul{
+.list-type /*ul*/{
     list-style-type: none;
-    padding: 0; 
-    margin: 0;  
+    padding: 0;  /*used it to set the list under h3 */
 }
-a{
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
+.link-style /*a*/{
+    color:#77635c;
 }
-header ul{
+.nav-header-row /*header ul*/{
+    /* display: flex to set the header navbar horizontally not vertically*/
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-end; /*to move the header nav bar to right*/
     position: absolute;
     top: 27px;
-    right: 0;
-    margin-right: 20px;   
+    right: 0; 
+    margin-right: 20px;
 }
-header ul li a{
+.nav-header-row .link-style{
     margin-left: 13px;
-    font-size: 13px;
-    padding: 31px 0 0px 0;
+    padding: 35px 0 0 0;
 }
-header ul li, .search-icon, .login-icon,.cart-icon{
+.search-icon, .login-icon,.cart-icon{
     position: relative;
 }
+
 .search-icon::before, .login-icon::before,.cart-icon::before {
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900;
     position: absolute;
-    top:10px;
-    left: 30%;
+    top: 8px;
+    left: 10px;
+    font-size: 22px;
 }
 .search-icon::before{
     content: "\f002"
@@ -77,31 +59,23 @@ header ul li, .search-icon, .login-icon,.cart-icon{
 }
 .cart-icon::before {
     content: "\f07a";
+    left: 2px;
 }
-form{
+.form-style{
+    width: 25%;
+    margin: auto;
     display: none;
 }
-fieldset{
-    height: 100px;
-}
-input{
-    padding: 8px;   
-    width: 250px;   
-    display: block;
-    margin: 0 auto;
-    border-color: #ccc;
-}
 .nav-footer-col{
-    display: inline-block; 
+    display: inline-block;
     vertical-align: top;
-    padding-left: 100px;
-    text-align: left;
+    padding:10px 0 0 100px;
 }
-
-h3{
+.main-footer-style h3{
+    font-size: 20px;
     margin: 0 0 7px 0;
 }
-footer p{
- margin-left: 625px;
+.main-footer-style p{
+ margin-left: 640px;
  display: inline;   
 }
