@@ -12,12 +12,7 @@ body>header, footer{
 body>header{
     height: 25%;
 }
-footer{
-    /* used to set the footer at the end of web page*/
-    position: fixed;   
-    bottom: 0;      
-    width: 100%;
-}
+
 .list-type /*ul*/{
     list-style-type: none;
     padding: 0;  /*used it to set the list under h3 */
@@ -61,10 +56,18 @@ footer{
     content: "\f07a";
     left: 2px;
 }
-.form-style{
-    width: 25%;
-    margin: auto;
-    display: none;
+.search-icon:hover, .login-icon:hover,.cart-icon:hover, .link-style:hover{
+    color: black;
+    text-decoration: none;
+}
+#searchbar{
+    display: inline-block;
+    margin: 28px 35%; 
+}
+.searchbar-style{
+    height: 100px;
+    background: papayawhip;
+    */
 }
 .nav-footer-col{
     display: inline-block;
