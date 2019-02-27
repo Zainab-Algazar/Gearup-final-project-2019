@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="MBM.css">
     <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="home-page.css"> -->
 </head>
 <body>
     <header>
-        <h1>MBM</h1>
+        <h1>Buy.com</h1>
         <nav>
             <ul class="list-type nav-header-row ">
                 <li><a class="link-style search-icon"href="">Search</i></a></li>
@@ -21,13 +22,136 @@
             </ul>
             <!--search bar using bootstrap with added some own styling-->
         </nav>
-        <div class="searchbar-style">
-            <input id ="searchbar" class= "form-control w-25" type="search" name="search" placeholder="What are you looking for?">
-        </div>
+        <form class="form-style" action="">
+            <label for="search"></label>
+            <input id ="searchbar" class= "form-control" type="search" name="search" placeholder="What are you looking for?">
+            <a href="" role="button"></a>
+        </form>
     </header>
-    
-    <!--the main content-->
-
+    <div class="mainPage">
+        <div id="carouselExampleSlidesOnly" class="carousel slide h-25" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://i.imgur.com/Abm0wRq.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://i.pinimg.com/564x/cf/d0/ee/cfd0eea6b467bd8749120195b52fb8f8.jpg?b=t" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images-medium-5/led-zeppelin-years-collage-donna-wilson.jpg" alt="Third slide">
+            </div>
+        </div>
+        <div class="grid-container">
+            <section id="pinkFriday" class="album">
+                <img src="http://theaudacityofcolor.com/core/wp-content/uploads/2010/10/Nicki-Minaj-Pink-Friday.jpg" alt="pink friday cover photo" title="pink friday">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">Pink Friday</li>
+                        <li class="category">Albums</li>
+                        <li class="price">60 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="album" id="landMarkVoid">
+                <img src="http://idaaf.com/wp-content/uploads/2014/03/3.Landmark-VOID.jpg" alt="landmark void cover photo" title="landmark void">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">LandMark Void</li>
+                        <li class="category">Albums</li>
+                        <li class="price">50 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="album" id="dangerDoom">
+                <img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/6b2ef062-6913-4a94-a265-7d75f4f91854/64.jpg" alt="danger doom cover photo" title="danger doom">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">Danger Doom</li>
+                        <li class="category">Albums</li>
+                        <li class="price">30 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="book" id="speak">
+                <img src="https://images.gr-assets.com/books/1529044298l/39280444.jpg" alt="speak book cover photo" title="speak book">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">Speak</li>
+                        <li class="category">Books</li>
+                        <li class="price">50 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="book" id="aDollysHouse">
+                <img src="https://images.gr-assets.com/books/1427119396l/37793.jpg" alt="A Dolly's House cover photo" title="A Dolly's House">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">A Dolly's House</li>
+                        <li class="category">Books</li>
+                        <li class="price">70 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="book" id="littleWomen">
+                <img src="https://images.gr-assets.com/books/1388269517l/1934.jpg" alt="little Women cover photo" title="little Women">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">Little Women</li>
+                        <li class="category">Books</li>
+                        <li class="price">35 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="movie" id="maiden">
+                <img src="https://previews-graphicriver.imgix.net/files/228254188/movie%20posters%20poster%20template%208.5x11.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=2f070615ecf33c60d0e1df0ddcaf552d" alt="maiden poster" title="maiden">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">Maiden</li>
+                        <li class="category">Movies</li>
+                        <li class="price">20 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="movie" id="rightTime">
+                <img src="https://marketplace.canva.com/MACGp9_jvD0/2/0/thumbnail_large/canva-cityscape-buildings-movie-poster-MACGp9_jvD0.jpg" alt="Right Time poster" title="Right Time">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">Right Time</li>
+                        <li class="category">Movies</li>
+                        <li class="price">50 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+            <section class="movie" id="whatTheyHad">
+                <img src="https://www.joblo.com/assets/images/oldsite/posters/images/full/WHATTHEYHAD_Poster.jpg" alt="what They Had poster" title="what They Had">
+                <div class="overlay">
+                    <ul>
+                        <li class="name">What They Had</li>
+                        <li class="category">Movies</li>
+                        <li class="price">85 EGP</li>
+                    </ul>
+                    <a href="#" class="details">More Details</a>
+                    <a href="#" class="buy">Buy</a>
+                </div>
+            </section>
+        </div>
+    </div>
     <footer class="main-footer-style">
         <!--  -->
         <div class="nav-footer-col">
@@ -37,7 +161,6 @@
                     <li><a class="link-style" href="">About us</a></li>
                     <li><a class="link-style" href="">Blog</a></li>
                 </ul>
-
             </nav>
         </div>
         <div class="nav-footer-col">
@@ -61,11 +184,11 @@
                 </ul>
             </nav>
         </div>
-        <p>Copyright 2019 some rights reserved </p>
+        <p>Copyright &copy 2019 some rights reserved </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="home-page.js"></script>
 </body>
