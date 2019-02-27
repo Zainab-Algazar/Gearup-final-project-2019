@@ -8,6 +8,7 @@ html{
 body>header, footer{
     background-color:#f0cfc6;
     color: #77635c;
+    width: 100%;
 }
 body>header{
     height: 25%;
@@ -67,7 +68,7 @@ body>header{
 .searchbar-style{
     height: 100px;
     background: papayawhip;
-    */
+    display: none;
 }
 .nav-footer-col{
     display: inline-block;
@@ -79,6 +80,6 @@ body>header{
     margin: 0 0 7px 0;
 }
 .main-footer-style p{
- margin-left: 640px;
+ margin-left: 620px;
  display: inline;   
 }
