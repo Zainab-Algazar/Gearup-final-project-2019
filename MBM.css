@@ -72,6 +72,7 @@ body, .grid-container > section{
  	padding: 10px;
  	margin: 10px 20px;
  	text-decoration: none;
+ 	border-radius: 7px;
 }
 .details:hover , .buy:hover{
 	text-decoration: none;
