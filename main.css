@@ -68,6 +68,7 @@ body>header{
 .searchbar-style{
     height: 100px;
     background: papayawhip;
+    /*we will use javascript to display it*/
     display: none;
 }
 .nav-footer-col{
