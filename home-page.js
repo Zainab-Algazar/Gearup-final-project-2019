@@ -66,25 +66,51 @@
     	"category":"Movies",
     	"price": 85
     };
-    function add_to_page(a){
-    	var i="#"+a.id;
-    	var m= i+" img";
-    	var n= i+" .name";
-    	var c= i+" .category";
-    	var p= i+" .price";
-    	$(m).attr('src', a.photo);
-    	$(n).text(a.name);
-    	$(c).text(a.category);
-    	$(p).text(a.price + " EGP");
+    function addToPage(a){
+        var i="#"+a.id;
+        var m= i+" img";
+        var n= i+" .name";
+        var c= i+" .category";
+        var p= i+" .price";
+        $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul> <a href="#" class="details">More Details</a><a href="#" class="buy">Buy</a></div></section>');
+        $('.grid-container section:last-child').attr('id',a.id);
+        $(i).addClass(a.category);
+        $(m).attr('src', a.photo);
+        $(m).attr('alt',a.name+" poster");
+        $(m).attr('title',a.name)
+        $(n).text(a.name);
+        $(c).text(a.category);
+        $(p).text(a.price + " EGP");
     };
-    add_to_page(album_1);
-    add_to_page(album_2);
-    add_to_page(album_3);
-    add_to_page(book_1);
-    add_to_page(book_2);
-    add_to_page(book_3);
-    add_to_page(movie_1);
-    add_to_page(movie_2);
-    add_to_page(movie_3);
+    addToPage(album_1);
+    addToPage(album_2);
+    addToPage(album_3);
+    addToPage(book_1);
+    addToPage(book_2);
+    addToPage(book_3);
+    addToPage(movie_1);
+    addToPage(movie_2);
+    addToPage(movie_3);
+    
+    // function add_to_page(a){
+    //  var i="#"+a.id;
+    //  var m= i+" img";
+    //  var n= i+" .name";
+    //  var c= i+" .category";
+    //  var p= i+" .price";
+    //  $(m).attr('src', a.photo);
+    //  $(n).text(a.name);
+    //  $(c).text(a.category);
+    //  $(p).text(a.price + " EGP");
+    // };
+    // add_to_page(album_1);
+    // add_to_page(album_2);
+    // add_to_page(album_3);
+    // add_to_page(book_1);
+    // add_to_page(book_2);
+    // add_to_page(book_3);
+    // add_to_page(movie_1);
+    // add_to_page(movie_2);
+    // add_to_page(movie_3);
     
        
