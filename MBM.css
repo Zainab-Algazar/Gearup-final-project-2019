@@ -13,7 +13,6 @@ body, .grid-container > section{
 .grid-container{
 	display: grid;
   	grid-template-columns: auto auto auto;
-  	width: 100%;
   	justify-content: center;
   	margin: 5% auto;
   	grid-gap: 1.5%;

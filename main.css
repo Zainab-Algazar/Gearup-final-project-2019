@@ -9,7 +9,6 @@ body>header, footer{
     background-color:#f0cfc6;
     color: #77635c;
     width: 100%;
-    
 }
 header{
     padding: 20px 0 0 0;
@@ -98,6 +97,5 @@ h1+img{
     margin: 0 0 7px 0;
 }
 .main-footer-style p{
- margin-left: 620px;
- display: inline;   
+ padding-left: 1030px;   
 }
