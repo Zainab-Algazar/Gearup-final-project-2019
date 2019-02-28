@@ -18,8 +18,9 @@ h1{
 }
 h1+img{
     height: 55px;
-    width: 100px;
+    width: 120px;
     margin-left: 20px;
+    padding-left: 10px;
 }
 
 .list-type /*ul*/{
@@ -69,15 +70,17 @@ h1+img{
     color: black;
     text-decoration: none;
 }
-#searchbar{
+#searchbar, .custom-select{
     display: inline-block;
-    margin: 28px 35%; 
+    margin: 30px 5px; 
 }
 .searchbar-style{
     height: 100px;
-    background: papayawhip;
+    background: #f0cfc6;
     position: relative;
+    left: 430px;
     margin-top: 20px;
+
     /*we will use javascript to display it*/
     /* display: none; */
 }
