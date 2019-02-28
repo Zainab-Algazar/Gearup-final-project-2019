@@ -19,7 +19,7 @@ h1{
 h1+img{
     height: 55px;
     width: 120px;
-    margin-left: 20px;
+    margin: 0 20px 20px 20px;
     padding-left: 10px;
 }
 
@@ -72,15 +72,14 @@ h1+img{
 }
 #searchbar, .custom-select{
     display: inline-block;
-    margin: 30px 5px; 
+    margin: 3px;
 }
 .searchbar-style{
     height: 100px;
     background: #f0cfc6;
     position: relative;
     left: 430px;
-    margin-top: 20px;
-
+    display: none;
     /*we will use javascript to display it*/
     /* display: none; */
 }

@@ -1,6 +1,7 @@
  $(document).ready(function(){
-    $(".search-icon").click(function(){
-        $(".form-style").style.display = "block";
+    	$(".link-style").click(function(){
+    	$(".searchbar-style").slideToggle("500");
+     });
     });
     var album_1={
     	"id": "album_1",
@@ -85,5 +86,5 @@
     add_to_page(movie_1);
     add_to_page(movie_2);
     add_to_page(movie_3);
-    });
+    
        
