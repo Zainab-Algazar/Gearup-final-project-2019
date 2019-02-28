@@ -73,9 +73,15 @@ h1+img{
 .searchbar-style{
     height: 100px;
     background: papayawhip;
+    position: relative;
     /*we will use javascript to display it*/
-    display: none;
+    /* display: none; */
 }
+.select-style{
+    width: 10%;
+    position: absolute;
+}
+
 .nav-footer-col{
     display: inline-block;
     vertical-align: top;
