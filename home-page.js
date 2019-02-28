@@ -1,9 +1,17 @@
+//*to display search box*//
 $(document).ready(function(){
     $(".search-icon").click(function(){
     $(".searchbar-style").slideToggle("500");
     });
 });
+ //*to add categories to filter without editing html code*//
+var productList = ["All", "Albums", "Books","Movies"];
+var pushProductList = [];
+for (var i = 0; i < productList.length; i++) {
+   pushProductList.push("<option>" + productList[i] + "</option>");
+}
 document.getElementById("dropdown-menu-products").innerHTML =  pushProductList.join("");
+
 var album_1={
     "id": "album_1",
     "name": "Pink Friday",
