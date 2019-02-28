@@ -73,12 +73,7 @@ h1+img{
 }
 #searchbar, .custom-select{
     display: inline-block;
-<<<<<<< HEAD
-    margin: 28px 35%;
-   
-=======
     margin: 3px;
->>>>>>> 74df5248eb995e5e2526fb7231f4bbde5da00410
 }
 .searchbar-style{
     height: 100px;
@@ -87,7 +82,6 @@ h1+img{
     left: 430px;
     display: none;
     /*we will use javascript to display it*/
-    /* display: none; */
 }
 .select-style{
     width: 10%;
