@@ -9,6 +9,7 @@ body>header, footer{
     background-color:#f0cfc6;
     color: #77635c;
     width: 100%;
+    
 }
 header{
     padding: 20px 0 0 0;
@@ -72,7 +73,12 @@ h1+img{
 }
 #searchbar, .custom-select{
     display: inline-block;
+<<<<<<< HEAD
+    margin: 28px 35%;
+   
+=======
     margin: 3px;
+>>>>>>> 74df5248eb995e5e2526fb7231f4bbde5da00410
 }
 .searchbar-style{
     height: 100px;
@@ -86,6 +92,8 @@ h1+img{
 .select-style{
     width: 10%;
     position: absolute;
+    top: 28%;
+    left: 25%;
 }
 
 .nav-footer-col{
