@@ -4,13 +4,16 @@ html{
 *{
     box-sizing: inherit
 }
+article{
+    display: none;
+}
 body {
     background-color:  #fdf9f6;
     font-family: 'Roboto', sans-serif;
 }
 .shopping-cart{
     width: 600px;
-    height: 600px;
+    height:600px;
     margin: 50px auto;
     background:  #F9eff0;
     box-shadow: 1px 2px 2px 0px;
