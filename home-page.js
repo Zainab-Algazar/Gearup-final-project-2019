@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
     $(".search-icon").click(function(){
         $(".form-style").style.display = "block";
     })
@@ -66,3 +66,4 @@ $(document).ready(function(){
     	"price": 85
     };
     });
+       

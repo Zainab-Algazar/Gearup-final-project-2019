@@ -8,9 +8,15 @@ html{
 body>header, footer{
     background-color:#f0cfc6;
     color: #77635c;
+    width: 100%;
 }
-body>header{
-    height: 25%;
+h1{
+    display: none;
+}
+h1+img{
+    height: 55px;
+    width: 55px;
+    margin-left: 50px;
 }
 
 .list-type /*ul*/{
@@ -67,8 +73,15 @@ body>header{
 .searchbar-style{
     height: 100px;
     background: papayawhip;
-    */
+    position: relative;
+    /*we will use javascript to display it*/
+    /* display: none; */
 }
+.select-style{
+    width: 10%;
+    position: absolute;
+}
+
 .nav-footer-col{
     display: inline-block;
     vertical-align: top;
@@ -79,6 +92,6 @@ body>header{
     margin: 0 0 7px 0;
 }
 .main-footer-style p{
- margin-left: 640px;
+ margin-left: 620px;
  display: inline;   
 }

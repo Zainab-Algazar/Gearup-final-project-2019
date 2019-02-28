@@ -9,24 +9,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="MBM.css">
     <link rel="stylesheet" href="main.css">
-    <!-- <link rel="stylesheet" href="home-page.css"> -->
 </head>
 <body>
     <header>
-        <h1>Buy.com</h1>
+        <h1>MBM</h1>
+        <img src="_logo.png" alt="">
         <nav>
             <ul class="list-type nav-header-row ">
-                <li><a class="link-style search-icon"href="">Search</i></a></li>
+                <li><a class="link-style search-icon"href="">Search</a></li>
                 <li><a class="link-style login-icon"href="">Log in</a></li>
                 <li><a class="link-style cart-icon" href="">Cart</a></li>
             </ul>
             <!--search bar using bootstrap with added some own styling-->
         </nav>
-        <form class="form-style" action="">
-            <label for="search"></label>
-            <input id ="searchbar" class= "form-control" type="search" name="search" placeholder="What are you looking for?">
-            <a href="" role="button"></a>
-        </form>
+        
+      
+        <div class="searchbar-style">
+             <input id ="searchbar" class= "form-control w-25" type="search" name="search" placeholder="What are you looking for?">
+             <select class="custom-select select-style">
+                <option selected>All</option>
+                <option value="1">Albums</option>
+                <option value="2">Books</option>
+                <option value="3">Movies</option>
+              </select>
+        </div>
     </header>
     <div class="mainPage">
         <div id="carouselExampleSlidesOnly" class="carousel slide h-25" data-ride="carousel">
