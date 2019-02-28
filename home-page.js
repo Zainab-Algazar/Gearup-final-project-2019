@@ -1,7 +1,7 @@
  $(document).ready(function(){
     $(".search-icon").click(function(){
         $(".form-style").style.display = "block";
-    })
+    });
     var album1={
     	"id": "album_1",
     	"name": "Pink Friday",
