@@ -13,7 +13,7 @@ body {
     height: 600px;
     margin: 0 auto;
     background:  #F9eff0;
-    box-shadow: 1px 2px 3px 0px;
+    box-shadow: 1px 2px 2px 0px;
     border-radius: 5px;
     position: relative;
     display: flex;
@@ -21,11 +21,13 @@ body {
 }
 .header-style{
     height: 60px;
+    padding: 17px 30px;
     border-bottom: 1px solid  #77635c;
-    padding: 20px 30px;
     color: #77635c;
-    font-size: 20px;
     font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
 }
 .items{
     padding: 20px 30px;
