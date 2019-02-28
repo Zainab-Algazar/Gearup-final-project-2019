@@ -1,5 +1,5 @@
  $(document).ready(function(){
-    	$(".link-style").click(function(){
+    	$(".search-icon").click(function(){
     	$(".searchbar-style").slideToggle("500");
      });
     });
