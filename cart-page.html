@@ -1,108 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="MBM.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="cart-page.css">
-    <title>Cart page</title>
-</head>
-<body>
-    <header>
-        <h1>MBM</h1>
-        <img src="_logo.png" alt="">
-        <nav>
-            <ul class="list-type nav-header-row ">
-                <li><a class="link-style search-icon" href="#">Search</a></li>
-                <li><a class="link-style login-icon" href="#">Log in</a></li>
-                <li><a class="link-style cart-icon" href="cart-page.html" target="_blank">Cart</a></li>
-            </ul>
-        </nav>
-        <form class="searchbar-style">
-            <input id ="searchbar" class= "form-control w-25" type="search" name="search" placeholder="What are you looking for?">
-            <select class="custom-select select-style">
-                <option selected>All</option>
-                <option value="1">Albums</option>
-                <option value="2">Books</option>
-                <option value="3">Movies</option>
-            </select>
-        </form>
-    </header>
-    <article class="shopping-cart">
-        <header  class="header-style">Shopping Bag</header>
-        <!--item 1-->
-        <section class="items">
-            <img src="https://images.gr-assets.com/books/1529044298l/39280444.jpg" alt="" />
-            <div class="details">
-                <span>Name: Speak</span>
-                <span>Category: Books</span>
-            </div>
-            <div class="counter">
-                <button class="add-button" type="button" name="button">+</button>
-                <input type="" name="name" value="1">
-                <button class="remove-button" type="button" name="button">-</button>
-            </div>
-            <div class="price">50 EGP</div>
-        </section>
-        <!--item 2-->
-        <section class="items">
-                <img src="https://images.gr-assets.com/books/1427119396l/37793.jpg" alt="" />
+<html>
+    <head>
+        <link rel="stylesheet" href="cart-page.css">
+    </head>
+    <body>
+        <article class="cart-page">
+            <header class="header-style">Shopping Bag</header>
+            <section class="items">
+                <img src="https://images.gr-assets.com/books/1529044298l/39280444.jpg">
                 <div class="details">
-                    <span>Name: A Dolly's House</span>
+                    <span>Name: Speak</span>
                     <span>Category: Books</span>
-                </div>
-                <div class="counter">
+                <div class="counter">   
                     <button class="add-button" type="button" name="button">+</button>
                     <input type="" name="name" value="1">
                     <button class="remove-button" type="button" name="button">-</button>
                 </div>
-                <div class="price">70 EGP</div>
-            </section>
-            <div class="checkout-position">
-                <button class="checkout-button" type="button" name="button">Checkout</button>
-            </div> 
-    </article>  
-    <footer class="main-footer-style">
-        <div class="nav-footer-col">
-            <h3>Company</h3>
-            <nav>
-                <ul class="footer-list list-type">
-                    <li><a class="link-style" href="">About us</a></li>
-                    <li><a class="link-style" href="">Blog</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="nav-footer-col">
-            <h3>Customer care</h3>
-            <nav>
-                <ul class="list-type">
-                    <li><a class="link-style" href="">Reviews</a></li>
-                    <li><a class="link-style" href="">Return policy</a></li>
-                    <li><a class="link-style" href="">Contact us</a></li>
-                </ul> 
-            </nav>
-        </div>
-        <div class="nav-footer-col">
-            <h3>Follow us</h3>
-            <nav>
-                <ul class="list-type">
-                    <li><a class="link-style" href=""><i class="fab fa-facebook"></i></a></li>
-                    <li><a class="link-style" href=""><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a class="link-style" href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a class="link-style" href=""><i class="fab fa-youtube-square"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-        <p> Copyright &copy 2019 some rights reserved </p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="home-page.js"></script> 
-</body>
+                <div class="price">60 EGP</div>
+            <footer>      
+                <div class="checkout">
+                    <button class="checkout-button" type="button" name="button">Checkout</button>
+                </div>
+            </footer>
+                
+                  
+              
+
+
+       
+       
+      
+                 
+    </body>
 </html>
