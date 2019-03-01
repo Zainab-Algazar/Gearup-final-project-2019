@@ -88,7 +88,15 @@ $(document).ready(function(){
         addToPage(album_array);
         addToPage(book_array);
         addToPage(movie_array);
-  
+    
+    var productList = ["All", "Albums", "Books","Movies"];
+    var j=1;
+    for (var i = 0; i < productList.length; i++) {
+           $('select').append('<option></option>');
+           $('select option:last-child').attr('value',j);
+           $('select option:last-child').text(productList[i]);
+          j+=1;
+    }
 
     $("select").change (function(event){
       var passOption= $(event.target).val();
