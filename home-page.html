@@ -18,13 +18,16 @@
             <ul class="list-type nav-header-row ">
                 <li><a class="link-style search-icon" href="#">Search</a></li>
                 <li><a class="link-style login-icon" href="#">Log in</a></li>
-                <li><a class="link-style cart-icon" href="cart-page.html">Cart</a></li>
+                <li><a class="link-style cart-icon" href="cart-page.html" target="_blank">Cart</a></li>
             </ul>
         </nav>
         <form class="searchbar-style">
             <input id ="searchbar" class= "form-control w-25" type="search" name="search" placeholder="What are you looking for?">
-            <select id="dropdown-menu-products" class="custom-select select-style">
-                
+            <select class="custom-select select-style">
+                <option value="1" selected>All</option>
+                <option value="2">Albums</option>
+                <option value="3">Books</option>
+                <option value="4">Movies</option>
             </select>
         </form>
     </header>
