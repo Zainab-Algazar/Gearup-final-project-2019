@@ -60,7 +60,7 @@ $(document).ready(function(){
             "price": 50
         },{
             "id": "movie_3",
-            "name": "What They Had",
+            "name":"What They Had",
             "photo": "https://www.joblo.com/assets/images/oldsite/posters/images/full/WHATTHEYHAD_Poster.jpg",
             "category":"Movies",
             "price": 85
@@ -98,17 +98,15 @@ $(document).ready(function(){
     }
     $("#searchbar").on("keyup", function(event){
       var userInput= $(event.target).val().toUpperCase();
+      var searchArray=[];
       for(var key in product){
         for(var i=0;i<product[key].length;i++){
             var nameOfPuoduct= product[key][i]["name"].toUpperCase();
-            
-            if(nameOfPuoduct.includes(userInput)==true){
-                var searchArray=[];
-                searchArray.push(product[key][i]);
+            if(nameOfPuoduct.includes(userInput)){
                 $('.grid-container').empty();
+                searchArray.push(product[key][i]);
                 addToPage(searchArray);
-            }else if(userInput=="" || nameOfPuoduct.includes(userInput)==false){
-
+            }else if(userInput==="" || nameOfPuoduct.includes(userInput)===false){
                 $('.grid-container section').show();
             };
         };
