@@ -3,10 +3,10 @@ $(document).ready(function(){
     $(".search-icon").click(function(){
     $(".searchbar-style").slideToggle("500");
     });
-    $(".cart-icon").click(function(){
-    $(".shopping-cart").slideToggle("500");
-    $(".shopping-cart").css({display:'flex',flexDirection: 'column'})
-    });
+    // $(".cart-icon").click(function(){
+    // $(".shopping-cart").slideToggle("500");
+    // $(".shopping-cart").css({display:'flex',flexDirection: 'column'})
+    // });
     var album_array =[{
         "id": "album_1",
         "name": "Pink Friday",
@@ -22,7 +22,7 @@ $(document).ready(function(){
     },{
         "id": "album_3",
         "name": "Danger Doom",
-        "photo": "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/6b2ef062-6913-4a94-a265-7d75f4f91854/64.jpg",
+        "photo": "photosofMBM/dangerdoom.jpg",
         "category":"Albums",
         "price": 75
     }];
@@ -67,22 +67,23 @@ $(document).ready(function(){
         "price": 85
     }];
     
+    var product={
+        "albums": album_array,
+        "books": book_array,
+        "movies": movie_array
+    };
+
     function addToPage(a){
         for(var j=0; j< a.length;j++){
-        var i="#"+a[j].id;
-        var m= i+" img";
-        var n= i+" .name";
-        var c= i+" .category";
-        var p= i+" .price";
         $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul> <a href="#" class="details">More Details</a><a href="#" class="buy">Buy</a></div></section>');
         $('.grid-container section:last-child').attr('id',a[j].id);
-        $(i).addClass(a[j].category);
-        $(m).attr('src', a[j].photo);
-        $(m).attr('alt',a[j].name+" poster");
-        $(m).attr('title',a[j].name)
-        $(n).text(a[j].name);
-        $(c).text(a[j].category);
-        $(p).text(a[j].price + " EGP");
+        $("#"+a[j].id).addClass(a[j].category);
+        $("#"+a[j].id+" img").attr('src', a[j].photo);
+        $("#"+a[j].id+" img").attr('alt',a[j].name+" poster");
+        $("#"+a[j].id+" img").attr('title',a[j].name)
+        $("#"+a[j].id+" .name").text(a[j].name);
+        $("#"+a[j].id+" .category").text(a[j].category);
+        $("#"+a[j].id+" .price").text(a[j].price + " EGP");
         }
     };
         addToPage(album_array);
@@ -121,4 +122,4 @@ $(document).ready(function(){
             break;
       };
     });
-  });
+});
