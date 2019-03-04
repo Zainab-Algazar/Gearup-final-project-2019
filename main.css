@@ -12,6 +12,9 @@ body>header, footer{
 }
 header{
     padding: 20px 0 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 h1{
     display: none;
@@ -96,5 +99,5 @@ h1+img{
     margin: 0 0 7px 0;
 }
 .main-footer-style p{
- padding-left: 1030px;   
+ padding-left: 1000px;   
 }
