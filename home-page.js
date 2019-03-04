@@ -106,8 +106,11 @@ $(document).ready(function(){
                 $('.grid-container').empty();
                 searchArray.push(product[key][i]);
                 addToPage(searchArray);
-            }else if(userInput==="" || nameOfPuoduct.includes(userInput)===false){
+            }else if(userInput===""){
                 $('.grid-container section').show();
+            // }else{
+            //     $('.grid-container').empty();
+            //     $('.grid-container').text('no results for what you search');
             };
         };
       };
@@ -117,24 +120,19 @@ $(document).ready(function(){
       var passOption= $(event.target).val();
       switch(passOption){
         case "1":
-            $('.grid-container .Albums').show();
-            $('.grid-container .Books').show();
-            $('.grid-container .Movies').show();
+            $('.grid-container .Albums, .grid-container .Books,.grid-container .Movies').show();
             break;
         case "2":
             $('.grid-container .Albums').show();
-            $('.grid-container .Books').hide();
-            $('.grid-container .Movies').hide();
+            $('.grid-container .Books, .grid-container .Movies').hide();
             break;
         case "3":
             $('.grid-container .Books').show();
-            $('.grid-container .Albums').hide();
-            $('.grid-container .Movies').hide();
+            $('.grid-container .Albums, .grid-container .Movies').hide();
             break;
         case "4":
             $('.grid-container .Movies').show();
-            $('.grid-container .Albums').hide();
-            $('.grid-container .Books').hide();
+            $('.grid-container .Albums, .grid-container .Books').hide();
             break;
       };
     });

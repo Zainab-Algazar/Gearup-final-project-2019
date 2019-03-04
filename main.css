@@ -80,13 +80,12 @@ h1+img{
 .searchbar-style{
     height: 80px;
     background: #f0cfc6;
-    margin-left: 480px;
+    margin-left: 280px;
     display: none;
     /*we will use javascript to display it*/
 }
 .select-style{
-    width: 10%;
-    position: absolute;
+    width: 20%;
 }
 
 .nav-footer-col{
