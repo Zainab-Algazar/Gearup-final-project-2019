@@ -39,7 +39,7 @@ body, .grid-container > section{
 	opacity: 0.3;
 }
 .grid-container  section:hover {
-  box-shadow: 0 0 2px 1px rgba(240,207,198,1);
+  box-shadow: 0 0 3px 2px rgba(240,207,198,1);
 }
 .grid-container section:hover .overlay {
   opacity: 0.8;
