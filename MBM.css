@@ -54,7 +54,7 @@ body, .grid-container > section{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	background-color: #F9EFF0;
+	background-color: #77635c;
 }
 .overlay ul{
 	list-style: none;
@@ -62,11 +62,12 @@ body, .grid-container > section{
 }
 .overlay li{
 	margin: 0 30px 10px 0;
+	color: #F9EFF0;
 }
 .details , .buy {
 	display: block;
-	background-color: rgba(240,207,198,0.7);
-  	color: #77635c;
+	background-color: rgba(249,239,240,1);
+  	color: #4c3f3b;
   	font-size: 16px;
  	padding: 10px;
  	margin: 10px 20px;
@@ -75,7 +76,7 @@ body, .grid-container > section{
 }
 .details:hover , .buy:hover{
 	text-decoration: none;
-	background-color: #f7bfbe;
+	background-color: #f0cfc6;
 }
 a:hover {
 	color: black;
