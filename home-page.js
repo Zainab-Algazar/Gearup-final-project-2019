@@ -68,20 +68,15 @@ $(document).ready(function(){
     };
     function addToPage(a){
         for(var j=0; j< a.length;j++){
-        var i="#"+a[j].id;
-        var m= i+" img";
-        var n= i+" .name";
-        var c= i+" .category";
-        var p= i+" .price";
         $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul> <a href="#" class="details">More Details</a><a href="#" class="buy">Buy</a></div></section>');
         $('.grid-container section:last-child').attr('id',a[j].id);
-        $(i).addClass(a[j].category);
-        $(m).attr('src', a[j].photo);
-        $(m).attr('alt',a[j].name+" poster");
-        $(m).attr('title',a[j].name)
-        $(n).text(a[j].name);
-        $(c).text(a[j].category);
-        $(p).text(a[j].price + " EGP");
+        $("#"+a[j].id).addClass(a[j].category);
+        $("#"+a[j].id+" img").attr('src', a[j].photo);
+        $("#"+a[j].id+" img").attr('alt',a[j].name+" poster");
+        $("#"+a[j].id+" img").attr('title',a[j].name)
+        $("#"+a[j].id+" .name").text(a[j].name);
+        $("#"+a[j].id+" .category").text(a[j].category);
+        $("#"+a[j].id+" .price").text(a[j].price + " EGP");
         }
     };
         addToPage(product.album_array);
@@ -136,4 +131,4 @@ $(document).ready(function(){
             break;
       };
     });
-  });
+});
