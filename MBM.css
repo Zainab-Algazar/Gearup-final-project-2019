@@ -74,6 +74,10 @@ body, .grid-container > section{
  	text-decoration: none;
  	border-radius: 7px;
 }
+.buy{
+	background-color: rgb(255,91,119);
+	color: white;
+}
 .details:hover , .buy:hover{
 	text-decoration: none;
 	background-color: #f0cfc6;
