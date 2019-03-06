@@ -77,6 +77,7 @@ h1+img{
 #searchbar, .custom-select{
     display: inline-block;
     margin: 3px;
+    vertical-align: middle;
 }
 .searchbar-style{
     height: 80px;
@@ -112,7 +113,7 @@ body, .grid-container > section{
 @media screen and (max-width: 500px) {
     .grid-container {
   	    grid-template-columns: auto;
-	}
+    }
 }
 
 .grid-container  section{
