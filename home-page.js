@@ -64,6 +64,42 @@ $(document).ready(function(){
             "photo": "https://www.joblo.com/assets/images/oldsite/posters/images/full/WHATTHEYHAD_Poster.jpg",
             "category":"Movies",
             "price": 85
+        },{
+            "id": "movie_1",
+            "name": "Maiden",
+            "photo": "https://previews-graphicriver.imgix.net/files/228254188/movie%20posters%20poster%20template%208.5x11.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=2f070615ecf33c60d0e1df0ddcaf552d",
+            "category":"Movies",
+            "price": 20
+        },{
+            "id": "movie_2",
+            "name": "Right Time",
+            "photo": "https://marketplace.canva.com/MACGp9_jvD0/2/0/thumbnail_large/canva-cityscape-buildings-movie-poster-MACGp9_jvD0.jpg",
+            "category":"Movies",
+            "price": 50
+        },{
+            "id": "movie_3",
+            "name":"What They Had",
+            "photo": "https://www.joblo.com/assets/images/oldsite/posters/images/full/WHATTHEYHAD_Poster.jpg",
+            "category":"Movies",
+            "price": 85
+        },{
+            "id": "movie_1",
+            "name": "Maiden",
+            "photo": "https://previews-graphicriver.imgix.net/files/228254188/movie%20posters%20poster%20template%208.5x11.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=2f070615ecf33c60d0e1df0ddcaf552d",
+            "category":"Movies",
+            "price": 20
+        },{
+            "id": "movie_2",
+            "name": "Right Time",
+            "photo": "https://marketplace.canva.com/MACGp9_jvD0/2/0/thumbnail_large/canva-cityscape-buildings-movie-poster-MACGp9_jvD0.jpg",
+            "category":"Movies",
+            "price": 50
+        },{
+            "id": "movie_3",
+            "name":"What They Had",
+            "photo": "https://www.joblo.com/assets/images/oldsite/posters/images/full/WHATTHEYHAD_Poster.jpg",
+            "category":"Movies",
+            "price": 85
         }]
     };
     function addToPage(a){
