@@ -1,110 +1,11 @@
 * {
-    box-sizing: border-box;
     font-family: Raleway;
-    color: #777;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    color: #77635c;
-    background-color: #FDF9F6;
-}
-body>header, footer{
-    background-color:#f0cfc6;
-    
-    width: 100%;
-}
-header{
-    padding: 20px 0 0 0;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-h1{
-    display: none;
 }
 h1+a img{
     height: 55px;
     width: 120px;
     margin: 0 20px 20px 20px;
     padding-left: 10px;
-}
-
-.list-type /*ul*/{
-    list-style-type: none;
-    padding: 0;  /*used it to set the list under h3 */
-}
-.link-style /*a*/{
-    color:#77635c;
-}
-.nav-header-row /*header ul*/{
-    /* display: flex to set the header navbar horizontally not vertically*/
-    display: flex;
-    justify-content: flex-end; /*to move the header nav bar to right*/
-    position: absolute;
-    top: 27px;
-    right: 0; 
-    margin: 20px 30px;
-}
-.nav-header-row .link-style{
-    margin-left: 13px;
-    padding: 35px 0 0 0;
-}
-.search-icon, .login-icon,.cart-icon{
-    position: relative;
-}
-
-.search-icon::before, .login-icon::before,.cart-icon::before {
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    position: absolute;
-    top: 8px;
-    left: 10px;
-    font-size: 22px;
-}
-.search-icon::before{
-    content: "\f002"
-}
-
-.login-icon::before {
-    content: "\f007";
-}
-.cart-icon::before {
-    content: "\f07a";
-    left: 2px;
-}
-.search-icon:hover, .login-icon:hover,.cart-icon:hover, .link-style:hover{
-    color: black;
-    text-decoration: none;
-}
-#searchbar, .custom-select{
-    display: inline-block;
-    margin: 3px;
-}
-.searchbar-style{
-    height: 80px;
-    background: #f0cfc6;
-    margin-left: 280px;
-    display: none;
-    /*we will use javascript to display it*/
-}
-.select-style{
-    width: 20%;
-}
-
-.nav-footer-col{
-    display: inline-block;
-    vertical-align: top;
-    padding:10px 0 0 100px;
-}
-.main-footer-style h3{
-    font-size: 20px;
-    margin: 0 0 7px 0;
-}
-.main-footer-style p{
- padding-left: 1000px;   
 }
 .btn {
     text-align: center;
