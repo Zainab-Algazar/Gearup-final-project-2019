@@ -1,82 +1,79 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>cart page</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="main-style.css">
-    <link rel="stylesheet" href="cart-page.css">
-</head>
-<body>
-    <header>
-        <h1>MBM</h1>
-        <img src="logo.png" alt="">
-        <nav>
-            <ul>
-                <li><a class="link-style search-icon" href="#searchbar-style">Search</a></li>
-                <li><a class="link-style login-icon" href="#">Log in</a></li>
-                <li><a class="link-style cart-icon" href="cart-page.html" target="_blank">Cart</a></li>
-            </ul>
-        </nav>
-        <form class="searchbar-style">
-            <input id ="searchbar" class= "form-control w-50" type="search" name="search" placeholder="What are you looking for?">
-            <select class="custom-select select-style">
-
-            </select>
-        </form>
-    </header>
-    <section class="container content-section">
-        <h2 class="section-header">CART</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">ITEM</span>
-            <span class="cart-price cart-header cart-column">PRICE</span>
-            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-        </div>
-        <div class="cart-items">
-        </div>
-        <div class="cart-total">
-            <strong class="cart-total-title">Total</strong>
-            <span class="cart-total-price">$0</span>
-        </div>
-    </section>
-
-
-
-
-    <footer class="main-footer-style">
-        <div class="nav-footer-col">
-            <h3>Company</h3>
-            <nav>
-                <ul class="footer-list">
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Blog</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="nav-footer-col">
-            <h3>Customer care</h3>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>cart page</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="main-style.css">
+        <link rel="stylesheet" href="cart-page.css">
+    </head>
+    <body>
+        <header>
+            <h1>MBM</h1>
+            <img src="logo.png" alt="">
             <nav>
                 <ul>
-                    <li><a href="">Reviews</a></li>
-                    <li><a href="">Return policy</a></li>
-                    <li><a href="">Contact us</a></li>
-                </ul> 
-            </nav>
-        </div>
-        <div class="nav-footer-col">
-            <h3>Follow us</h3>
-            <nav>
-                <ul>
-                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-youtube-square"></i></a></li>
+                    <li><a class="link-style search-icon" href="#searchbar-style">Search</a></li>
+                    <li><a class="link-style login-icon" href="#">Log in</a></li>
+                    <li><a class="link-style cart-icon" href="cart-page.html" target="_blank">Cart</a></li>
                 </ul>
             </nav>
-        </div>
-    </footer>
+            <form class="searchbar-style">
+                <input id ="searchbar" class= "form-control w-50" type="search" name="search" placeholder="What are you looking for?">
+                <select class="custom-select select-style">
+
+                </select>
+            </form>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+        </section>
+        <footer class="main-footer-style">
+            <div class="nav-footer-col">
+                <h3>Company</h3>
+                <nav>
+                    <ul class="footer-list">
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="nav-footer-col">
+                <h3>Customer care</h3>
+                <nav>
+                    <ul>
+                        <li><a href="">Reviews</a></li>
+                        <li><a href="">Return policy</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul> 
+                </nav>
+            </div>
+            <div class="nav-footer-col">
+                <h3>Follow us</h3>
+                <nav>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube-square"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
     <script src="product&cart.js" ></script>
    
 </body>
