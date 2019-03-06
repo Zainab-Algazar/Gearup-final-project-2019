@@ -1,0 +1,37 @@
+/* 
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+   
+}
+.checkout-form-style{
+    display: flex;
+}
+.checkout-form-style-col{
+    flex: 50%
+}
+
+.icon-container {
+    margin-bottom: 12px;
+    padding: 7px 0;
+    font-size: 24px; 
+}
+  
+
+input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+  
+label{
+    margin-bottom: 12px;
+    display: block;
+}
+.fa fa-cc-visa{
+    width: 50px;
+    height: 50px;
+
+} */
