@@ -89,6 +89,14 @@ h1+img{
 .select-style{
     width: 20%;
 }
+#searchbar{
+    width: 50%
+}
+@media screen and (max-width: 744px) {
+    #searchbar{
+        width: 70%;
+    }
+}
 
 body, .grid-container > section{
 	margin: 0;
@@ -113,7 +121,7 @@ body, .grid-container > section{
 	position: relative;
 	background-color:inherit;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .grid-container {
   	    grid-template-columns: auto auto;
     }
