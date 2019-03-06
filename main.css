@@ -3,7 +3,7 @@ html{
 }
 *{
     box-sizing: inherit;
-    /* border: 1px solid red; */
+     /*border: 1px solid red; */
 }
 body>header, footer{
     background-color:#f0cfc6;
@@ -94,30 +94,33 @@ h1+img{
 }
 @media screen and (max-width: 744px) {
     #searchbar{
-        width: 70%;
+    width: 70%;
     }
 }
 
-body, .grid-container > section{
+body{
 	margin: 0;
 	padding: 0;
 	background-color: #FDF9F6;
 	color: #77635c;
 }
+.mainPage{
+	margin-bottom: 5%;
+}
 .grid-container{
 	display: grid;
-  	grid-template-columns: auto auto auto;
+	width: 80%;
+	grid-template-columns: 17.5rem 17.5rem 17.5rem;
   	justify-content: center;
   	margin: 2% auto;
-  	grid-gap: 1.5%;
+  	grid-column-gap: 10px;
+	grid-row-gap: 15px;
   	background-color:inherit;
+  	grid-auto-rows: 18.75rem;
 }
 .grid-container  section{
-	width: 17.5rem;
-	height: 18.75rem;
 	border: 0.0625rem solid rgb(240,207,198);
 	border-radius: 0.25rem;  
-	padding: 0.3125rem; 
 	position: relative;
 	background-color:inherit;
 }
@@ -130,16 +133,6 @@ body, .grid-container > section{
     .grid-container {
   	    grid-template-columns: auto;
     }
-}
-
-.grid-container  section{
-	width: 17.5rem;
-	height: 18.75rem;
-	border: 0.0625rem solid rgb(240,207,198);
-	border-radius: 0.25rem;  
-	padding: 0.3125rem; 
-	position: relative;
-	background-color:inherit;
 }
 .grid-container  section img{
 	width:100%; 
@@ -188,6 +181,10 @@ body, .grid-container > section{
  	text-decoration: none;
  	border-radius: 7px;
 }
+.buy{
+	background-color: rgb(242, 106, 131);
+	color: white;
+}
 .details:hover , .buy:hover{
 	text-decoration: none;
 	background-color: #f0cfc6;
@@ -210,4 +207,3 @@ a:hover {
     font-size: 20px;
     margin: 0 0 7px 0;
 }
-

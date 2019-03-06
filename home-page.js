@@ -68,7 +68,7 @@ $(document).ready(function(){
     };
     function addToPage(a){
         for(var j=0; j< a.length;j++){
-        $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul> <a href="#" class="details">More Details</a><a href="#" class="buy">Buy</a></div></section>');
+        $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul> <a href="product.html" class="details">More Details</a><a href="#" class="buy">Buy</a></div></section>');
         $('.grid-container section:last-child').attr('id',a[j].id);
         $("#"+a[j].id).addClass(a[j].category);
         $("#"+a[j].id+" img").attr('src', a[j].photo);
