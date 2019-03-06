@@ -110,20 +110,17 @@ body{
 .grid-container{
 	display: grid;
 	width: 80%;
-  	grid-template-columns: auto auto auto;
+	grid-template-columns: 17.5rem 17.5rem 17.5rem;
   	justify-content: center;
   	margin: 2% auto;
-  	grid-gap: 1.5%;
+  	grid-column-gap: 10px;
+	grid-row-gap: 15px;
   	background-color:inherit;
-  	grid-auto-rows: minmax(10.75rem, auto);
+  	grid-auto-rows: 18.75rem;
 }
 .grid-container  section{
-	width: 17.5rem;
-	height: 18.75rem;
 	border: 0.0625rem solid rgb(240,207,198);
 	border-radius: 0.25rem;  
-	padding: 0.3125rem;
-	margin: 0; 
 	position: relative;
 	background-color:inherit;
 }
