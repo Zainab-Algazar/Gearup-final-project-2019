@@ -3,15 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>cart page</title>
+    <title>product page</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="cart-page.css">
+    <link rel="stylesheet" href="product.css">
 </head>
 <body>
     <header>
         <h1>MBM</h1>
-        <img src="_logo.png" alt="">
+       <a href="home-page.html"> <img src="_logo.png" alt=""></a>
         <nav>
             <ul class="list-type nav-header-row ">
                 <li><a class="link-style search-icon" href="#searchbar-style">Search</a></li>
@@ -27,23 +27,21 @@
         </form>
     </header>
     <section class="container content-section">
-        <h2 class="section-header">CART</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">ITEM</span>
-            <span class="cart-price cart-header cart-column">PRICE</span>
-            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-        </div>
-        <div class="cart-items">
-        </div>
-        <div class="cart-total">
-            <strong class="cart-total-title">Total</strong>
-            <span class="cart-total-price">$0</span>
+       
+        <div class="shop-items">
+            <div class="shop-item">
+                <span class="shop-item-title">Danger Boom</span>
+                <img class="shop-item-image" src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/6b2ef062-6913-4a94-a265-7d75f4f91854/64.jpg">
+                <div class="shop-item-details">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae provident culpa cupiditate a. Ab aut id soluta ad numquam suscipit, fugit qui ut tenetur veniam iure harum vitae voluptas aliquid.</p>
+                    <span class="shop-item-price">$12.99</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
         </div>
     </section>
-
-
-
-
+    
+   
     <footer class="main-footer-style">
         <div class="nav-footer-col">
             <h3>Company</h3>
@@ -79,5 +77,4 @@
     </footer>
     <script src="product&cart.js" ></script>
    
-</body>
 </html>
