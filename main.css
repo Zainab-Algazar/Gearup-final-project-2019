@@ -10,6 +10,7 @@ body>header, footer{
     color: #77635c;
     width: 100%;
 }
+
 header{
     padding: 20px 0 0 0;
     position: sticky;
@@ -97,6 +98,4 @@ h1+img{
     font-size: 20px;
     margin: 0 0 7px 0;
 }
-.main-footer-style p{
- padding-left: 1000px;   
-}
+
