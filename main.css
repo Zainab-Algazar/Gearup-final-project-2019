@@ -1,33 +1,23 @@
-/* we use both bootstrap & our own styling*/
 html{
     box-sizing: border-box;
 }
 *{
     box-sizing: inherit;
+     /*border: 1px solid red; */
 }
-body>header,.details:hover , .buy:hover, footer{
+body>header, footer{
     background-color:#f0cfc6;
-}
-body, a{
     color: #77635c;
-}
-body, .grid-container > section{
-	margin: 0;
-}
-
-body, .grid-container > section, footer ul{
-    padding: 0; 
-}
-header,.grid-container section img, footer{
     width: 100%;
 }
-body>header{
+
+header{
+    padding: 20px 0 0 0;
     position: sticky;
     top: 0;
     z-index: 1;
-    padding-top: 20px;
 }
-h1, .searchbar-style  /*we will use javascript to display the search box*/{
+h1{
     display: none;
 }
 h1+img{
@@ -36,30 +26,35 @@ h1+img{
     margin: 0 20px 20px 20px;
     padding-left: 10px;
 }
-ul{
-    list-style-type: none;  
+
+.list-type /*ul*/{
+    list-style-type: none;
+    padding: 0;  /*used it to set the list under h3 */
 }
-body>header ul{
+.link-style /*a*/{
+    color:#77635c;
+}
+.nav-header-row /*header ul*/{
     /* display: flex to set the header navbar horizontally not vertically*/
     display: flex;
     justify-content: flex-end; /*to move the header nav bar to right*/
+    position: absolute;
     top: 27px;
     right: 0; 
     margin: 20px 30px;
 }
-body>header ul .link-style{
+.nav-header-row .link-style{
     margin-left: 13px;
-    padding-top: 35px;
+    padding: 35px 0 0 0;
 }
 .search-icon, .login-icon,.cart-icon{
     position: relative;
 }
-header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overlay{
-    position: absolute;
-}
+
 .search-icon::before, .login-icon::before,.cart-icon::before {
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900;
+    position: absolute;
     top: 8px;
     left: 10px;
     font-size: 22px;
@@ -67,6 +62,7 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 .search-icon::before{
     content: "\f002"
 }
+
 .login-icon::before {
     content: "\f007";
 }
@@ -74,20 +70,21 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     content: "\f07a";
     left: 2px;
 }
-.search-icon:hover, .login-icon:hover,.cart-icon:hover, a:hover{
+.search-icon:hover, .login-icon:hover,.cart-icon:hover, .link-style:hover{
     color: black;
     text-decoration: none;
 }
-#searchbar, .custom-select,.nav-footer-col{
-    display: inline-block;
-}
 #searchbar, .custom-select{
+    display: inline-block;
     margin: 3px;
     vertical-align: middle;
 }
 .searchbar-style{
     height: 80px;
+    background: #f0cfc6;
     margin-left: 280px;
+    display: none;
+    /*we will use javascript to display it*/
 }
 .select-style{
     width: 20%;
@@ -95,33 +92,38 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 #searchbar{
     width: 50%
 }
-/*responsive search box*/
 @media screen and (max-width: 744px) {
     #searchbar{
-        width: 70%;
+    width: 70%;
     }
 }
-body, .grid-container > section{
+
+body{
+	margin: 0;
+	padding: 0;
 	background-color: #FDF9F6;
+	color: #77635c;
+}
+.mainPage{
+	margin-bottom: 5%;
 }
 .grid-container{
 	display: grid;
-  	grid-template-columns: auto auto auto;
+	width: 80%;
+	grid-template-columns: 17.5rem 17.5rem 17.5rem;
   	justify-content: center;
   	margin: 2% auto;
-  	grid-gap: 1.5%;
+  	grid-column-gap: 10px;
+	grid-row-gap: 15px;
   	background-color:inherit;
+  	grid-auto-rows: 18.75rem;
 }
 .grid-container  section{
-	width: 17.5rem;
-	height: 18.75rem;
 	border: 0.0625rem solid rgb(240,207,198);
 	border-radius: 0.25rem;  
-	padding: 0.3125rem; 
 	position: relative;
 	background-color:inherit;
 }
-/*responsive grid system*/
 @media screen and (max-width: 1000px) {
     .grid-container {
   	    grid-template-columns: auto auto;
@@ -133,7 +135,8 @@ body, .grid-container > section{
     }
 }
 .grid-container  section img{
-    height: 100%;
+	width:100%; 
+	height:100%;
 	display:block;
 	opacity: 1;
 	transition: .5s ease;
@@ -143,16 +146,17 @@ body, .grid-container > section{
 	opacity: 0.3;
 }
 .grid-container  section:hover {
-    box-shadow: 0 0 0.1875rem 0.125rem rgba(240,207,198,1);
+  box-shadow: 0 0 0.1875rem 0.125rem rgba(240,207,198,1);
 }
 .grid-container section:hover .overlay {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 .overlay {
 	width:99%; 
 	height:99%;
 	transition: .5s ease;
 	opacity: 0;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -160,6 +164,7 @@ body, .grid-container > section{
 	background-color: #77635c;
 }
 .overlay ul{
+	list-style: none;
 	margin-top: 3.125rem;
 }
 .overlay li{
@@ -169,22 +174,36 @@ body, .grid-container > section{
 .details , .buy {
 	display: block;
 	background-color: rgba(249,239,240,1);
+  	color: #4c3f3b;
   	font-size: 1rem;
  	padding: 0.625rem;
  	margin: 0.625rem 1.25rem;
+ 	text-decoration: none;
  	border-radius: 7px;
+}
+.buy{
+	background-color: rgb(242, 106, 131);
+	color: white;
+}
+.details:hover , .buy:hover{
+	text-decoration: none;
+	background-color: #f0cfc6;
+}
+a:hover {
+	color: black;
 }
 .carousel-inner{
 	height: 22.625rem;
 	width: 80%;
 	margin: 0 auto;
 }
+
 .nav-footer-col{
+    display: inline-block;
     vertical-align: top;
     padding:10px 0 0 100px;
 }
 .main-footer-style h3{
     font-size: 20px;
-    margin-bottom: 7px;
+    margin: 0 0 7px 0;
 }
-
