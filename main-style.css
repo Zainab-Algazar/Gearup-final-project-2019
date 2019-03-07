@@ -96,11 +96,11 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     width: 50%
 }
 /*responsive search box*/
-@media screen and (max-width: 744px) {
+/* @media screen and (max-width: 744px) {
     #searchbar{
         width: 70%;
     }
-}
+} */
 body, .grid-container > section{
 	background-color: #FDF9F6;
 }
