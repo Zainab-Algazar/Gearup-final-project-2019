@@ -1,37 +1,55 @@
-/* 
-html{
-    box-sizing: border-box;
+
+.icon-container i{
+  color: #77635c;
 }
-*{
-    box-sizing: inherit;
-   
+.icon-container i,#cash-delivery, .cash{
+    display: inline-block
+}
+.icon-container{
+    height: 28px;
+}
+.btn{
+    background: #77635c;
+    color: #f0cfc6;
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:15px;
 }
 .checkout-form-style{
     display: flex;
 }
 .checkout-form-style-col{
-    flex: 50%
+    flex: 75%;
+    margin-left: 200px;
 }
-
-.icon-container {
-    margin-bottom: 12px;
-    padding: 7px 0;
-    font-size: 24px; 
-}
-  
-
 input{
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-}
-  
-label{
-    margin-bottom: 12px;
     display: block;
+    width: 100%;
 }
-.fa fa-cc-visa{
-    width: 50px;
-    height: 50px;
+#name-on-card, #credit-card-no{
+    width: 50%;
+}
+#cash-delivery{
+    width: 20px;
+}
+.cash{
+    margin-bottom: 25px;
+}
+#cash-delivery, .cash{
+    margin-top: 34px;
+}
+table, th, td{
+padding: 5px;
+font-size:15px;
+}
+.bold{
+    font-weight: bold;
+}
 
-} */
+
+
+
+
