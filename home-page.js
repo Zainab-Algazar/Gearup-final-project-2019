@@ -6,6 +6,7 @@ $(document).ready(function(){
 $('.cart-icon').click(function() {
     $("#cartPage").slideToggle("500");
     });
+
     var product = {
         "album_array": [{
             "id": "album_1",
