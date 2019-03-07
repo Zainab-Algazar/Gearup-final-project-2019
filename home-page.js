@@ -8,7 +8,7 @@ $('.cart-icon').click(function() {
     });
 
     var product = {
-        "album_array": [{
+        "Albums_array": [{
             "id": "album_1",
             "name": "Pink Friday",
             "photo": "http://theaudacityofcolor.com/core/wp-content/uploads/2010/10/Nicki-Minaj-Pink-Friday.jpg",
@@ -27,7 +27,7 @@ $('.cart-icon').click(function() {
             "category":"Albums",
             "price": 75
         }],
-        "book_array": [{
+        "Books_array": [{
             "id": "book_1",
             "name": "SPEAK",
             "photo": "https://images.gr-assets.com/books/1529044298l/39280444.jpg",
@@ -46,7 +46,7 @@ $('.cart-icon').click(function() {
             "category":"Books",
             "price": 35
         }],
-        "movie_array": [{
+        "Movies_array": [{
             "id": "movie_1",
             "name": "Maiden",
             "photo": "https://previews-graphicriver.imgix.net/files/228254188/movie%20posters%20poster%20template%208.5x11.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=2f070615ecf33c60d0e1df0ddcaf552d",
@@ -73,15 +73,16 @@ $('.cart-icon').click(function() {
         $("#"+a[j].id).addClass(a[j].category);
         $("#"+a[j].id+" img").attr('src', a[j].photo);
         $("#"+a[j].id+" img").attr('alt',a[j].name+" poster");
-        $("#"+a[j].id+" img").attr('title',a[j].name)
+        $("#"+a[j].id+" img").attr('title',a[j].name);
         $("#"+a[j].id+" .name").text(a[j].name);
         $("#"+a[j].id+" .category").text(a[j].category);
         $("#"+a[j].id+" .price").text(a[j].price + " EGP");
+        $("#"+a[j].id+" .buy").attr('id',a[j].category+j);
         }
     };
-        addToPage(product.album_array);
-        addToPage(product.book_array);
-        addToPage(product.movie_array);
+        addToPage(product.Albums_array);
+        addToPage(product.Books_array);
+        addToPage(product.Movies_array);
     
     var productList = ["All", "Albums", "Books","Movies"];
     var j=1;
@@ -131,4 +132,35 @@ $('.cart-icon').click(function() {
             break;
       };
     });
+    function addToCart(a){
+        for(var j=0; j< a.length;j++){
+        $('.scroll').append('<section><img ><ul><li class="name"></li><li class="category"></li><li class="details"></li><li class="price">60 EGP</li></ul></section>');
+        $('.scroll section:last-child').attr('id',a[j].id);
+        $("#"+a[j].id).addClass(a[j].category);
+        $("#"+a[j].id+" img").attr('src', a[j].photo);
+        $("#"+a[j].id+" img").attr('alt',a[j].name+" poster");
+        $("#"+a[j].id+" img").attr('title',a[j].name);
+        $("#"+a[j].id+" .name").text(a[j].name);
+        $("#"+a[j].id+" .category").text(a[j].category);
+        $("#"+a[j].id+" .price").text(a[j].price + " EGP");
+        // $("#"+a[j].id+" .buy").attr('id',a[j].category+j);
+        }
+    };
+
+    var cart_array=[];
+    $('.buy').click(function() {
+        var buttonId=this.id;
+        var numId=buttonId.replace(/['Albums Books Movies"]+/g, '')
+        if(buttonId.includes("Albums")){
+            cart_array.push(product.Albums_array[numId]);
+        }else if(buttonId.includes("Books")){
+            cart_array.push(product.Books_array[numId]);
+        }else if(buttonId.includes("Movies")){
+            cart_array.push(product.Movies_array[numId]);
+        }
+        $('.scroll').empty();
+        addToCart(cart_array);
+    });
+
+    console.log(cart_array);
 });

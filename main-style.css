@@ -217,7 +217,7 @@ body, .grid-container > section{
 #cartPage{
     border: 1px solid #77635c;
     background-color: inherit;
-    position: fixed;
+    position: absolute;
     width: 50%;
     right: -50%;
     right: 0%;
