@@ -8,7 +8,7 @@ html{
 *{
     box-sizing: inherit;
 }
-header,.details:hover , .buy:hover, footer,h2{
+header,.grid-container .details:hover , .buy:hover, footer,h2{
     background-color:#f0cfc6;
 }
 body, a,#cartPage section{
@@ -179,7 +179,7 @@ body, .grid-container > section{
 	margin: 0 1.875rem 0.625rem 0;
 	color: #F9EFF0;
 }
-.details {
+.grid-container .details {
 	display: block;
 	background-color: rgba(249,239,240,1);
   	font-size: 1rem;
@@ -187,13 +187,18 @@ body, .grid-container > section{
  	margin: 0.625rem 1.25rem;
  	border-radius: 7px;
 }
-.buy{
+.buy, #cartPage a {
 	background-color: rgb(242, 106, 131);
 	color: white;
     font-weight: bold;
     padding: 0.5rem;
     width: 14.9rem; 
-    border-radius: 7px;
+    border-radius: 7px;   
+}
+#cartPage a{
+    display: block;
+    text-align: center;
+    margin: 1rem auto 0;
 }
 .carousel-inner{
 	height: 22.625rem;
