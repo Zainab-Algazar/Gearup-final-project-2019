@@ -3,10 +3,9 @@ $(document).ready(function(){
     $(".search-icon").click(function(){
     $(".searchbar-style").slideToggle("500");
     });
-    // $(".cart-icon").click(function(){
-    // $(".shopping-cart").slideToggle("500");
-    // $(".shopping-cart").css({display:'flex',flexDirection: 'column'})
-    // });
+$('.cart-icon').click(function() {
+    $("#cartPage").slideToggle("500");
+    });
     var product = {
         "album_array": [{
             "id": "album_1",
@@ -68,7 +67,7 @@ $(document).ready(function(){
     };
     function addToPage(a){
         for(var j=0; j< a.length;j++){
-        $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul> <a href="product.html" class="details">More Details</a><button type="button" class="buy">Buy</button></div></section>');
+        $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul> <a href="product.html" class="details">More Details</a><button type="button" class="buy">Add To Cart</button></div></section>');
         $('.grid-container section:last-child').attr('id',a[j].id);
         $("#"+a[j].id).addClass(a[j].category);
         $("#"+a[j].id+" img").attr('src', a[j].photo);
