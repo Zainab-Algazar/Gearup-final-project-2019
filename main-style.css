@@ -1,14 +1,17 @@
 /* we use both bootstrap & our own styling*/
 html{
     box-sizing: border-box;
+    left: 0%;
+    position: relative;
+    overflow-x: hidden;
 }
 *{
     box-sizing: inherit;
 }
-body>header,.details:hover , .buy:hover, footer{
+header,.grid-container .details:hover , .buy:hover, footer,h2{
     background-color:#f0cfc6;
 }
-body, a{
+body, a,#cartPage section{
     color: #77635c;
 }
 body, .grid-container > section{
@@ -74,7 +77,7 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     content: "\f07a";
     left: 2px;
 }
-.search-icon:hover, .login-icon:hover,.cart-icon:hover, a:hover{
+.search-icon:hover, .login-icon:hover,.cart-icon:hover, a:hover ,button:hover{
     color: black;
     text-decoration: none;
 }
@@ -176,7 +179,7 @@ body, .grid-container > section{
 	margin: 0 1.875rem 0.625rem 0;
 	color: #F9EFF0;
 }
-.details , .buy {
+.grid-container .details {
 	display: block;
 	background-color: rgba(249,239,240,1);
   	font-size: 1rem;
@@ -184,9 +187,19 @@ body, .grid-container > section{
  	margin: 0.625rem 1.25rem;
  	border-radius: 7px;
 }
-.buy{
+.buy, #cartPage a {
 	background-color: rgb(242, 106, 131);
 	color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 14.9rem; 
+    border-radius: 7px; 
+    /*display: block;  */
+}
+#cartPage a{
+    display: block;
+    text-align: center;
+    margin: 1rem auto 0;
 }
 .carousel-inner{
 	height: 22.625rem;
@@ -201,4 +214,64 @@ body, .grid-container > section{
     font-size: 20px;
     margin-bottom: 7px;
 }
+#cartPage{
+    border: 1px solid #77635c;
+    background-color: inherit;
+    position: absolute;
+    width: 50%;
+    right: -50%;
+    right: 0%;
+    z-index: 99999999999999999;
+    display: none;
+}
+.scroll{
+    /*position: fixed;*/
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+.productPage{
+    width: 60%;
+    border: 1px solid #77635c;
+    margin: 0 auto;
+    display: none;
+}
+#cartPage section, .productPage section{
+    flex-basis: 95%;
+    margin: 1rem;
+    border: 1px solid #77635c;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #F9EFF0;
+}
+.productPage section{
+     flex-wrap: wrap;
+     justify-content:flex-end;
+}
+#cartPage h2{
+    padding: 1rem;
+}
+#cartPage section img, .productPage section img{
+    flex-basis: 20%;
+    height: 11.5rem; 
+}
+#cartPage section ul, .productPage section ul{
+    list-style: none;
+    flex-basis: 75%;
+}
+#cartPage section li:last-child, .productPage section li:last-child{
+    float: right;
+    margin: 1rem 2rem 0 0;
+}
+#cartPage section li:first-child, .productPage section li:first-child{
+    font-weight: bold;
+}
+#cartPage section li:nth-child(2), .productPage section li:nth-child(2){
+    font-weight: 400;
+    font-size: 12px;
+}
+.productPage section button{
 
+}
