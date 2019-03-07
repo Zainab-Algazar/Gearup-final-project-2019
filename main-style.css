@@ -74,7 +74,7 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     content: "\f07a";
     left: 2px;
 }
-.search-icon:hover, .login-icon:hover,.cart-icon:hover, a:hover{
+.search-icon:hover, .login-icon:hover,.cart-icon:hover, a:hover,button:hover{
     color: black;
     text-decoration: none;
 }
@@ -176,7 +176,7 @@ body, .grid-container > section{
 	margin: 0 1.875rem 0.625rem 0;
 	color: #F9EFF0;
 }
-.details , .buy {
+.details {
 	display: block;
 	background-color: rgba(249,239,240,1);
   	font-size: 1rem;
@@ -187,6 +187,10 @@ body, .grid-container > section{
 .buy{
 	background-color: rgb(242, 106, 131);
 	color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 14.9rem; 
+    border-radius: 7px;
 }
 .carousel-inner{
 	height: 22.625rem;
