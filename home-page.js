@@ -162,5 +162,5 @@ $('.cart-icon').click(function() {
         addToCart(cart_array);
     });
 
-    console.log(cart_array);
+    // console.log(cart_array);
 });
