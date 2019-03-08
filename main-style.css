@@ -210,10 +210,14 @@ body, .grid-container > section{
     vertical-align: top;
     padding:10px 0 0 100px;
 }
+.nav-footer-col p{
+    padding-left: 520px;
+}
 .main-footer-style h3{
     font-size: 20px;
     margin-bottom: 7px;
 }
+
 #cartPage{
     border: 1px solid #77635c;
     background-color: inherit;
@@ -252,6 +256,9 @@ body, .grid-container > section{
 }
 #cartPage h2{
     padding: 1rem;
+}
+.scroll p{
+    text-align: center;
 }
 #cartPage section img, .productPage section img{
     flex-basis: 20%;
