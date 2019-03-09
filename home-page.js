@@ -132,10 +132,14 @@ $('.cart-icon').click(function() {
             break;
       };
     });
+
+   var total;
+   var cart_array=[];
     function addToCart(a){
+        total=0
         for(var j=0; j< a.length;j++){
-        $('.scroll').append('<section><img ><ul><li class="name"></li><li class="category"></li><li class="details"></li><li class="price">60 EGP</li></ul></section>');
-        $('.scroll section:last-child').attr('id',a[j].id);
+        $('.cartItems').append('<li><img ><ul><li class="name"></li><li class="category"></li><li class="details"></li><li class="price">60 EGP</li></ul></li>');
+        $('.cartItems  li:last-child').attr('id',a[j].id);
         $("#"+a[j].id).addClass(a[j].category);
         $("#"+a[j].id+" img").attr('src', a[j].photo);
         $("#"+a[j].id+" img").attr('alt',a[j].name+" poster");
@@ -143,11 +147,11 @@ $('.cart-icon').click(function() {
         $("#"+a[j].id+" .name").text(a[j].name);
         $("#"+a[j].id+" .category").text(a[j].category);
         $("#"+a[j].id+" .price").text(a[j].price + " EGP");
-        // $("#"+a[j].id+" .buy").attr('id',a[j].category+j);
+        total+=a[j].price;
+        $('.scroll span').text(total+" EGP");
         }
     };
-
-    var cart_array=[];
+        
     $('.buy').click(function() {
         var buttonId=this.id;
         var numId=buttonId.replace(/['Albums Books Movies"]+/g, '')
@@ -158,7 +162,8 @@ $('.cart-icon').click(function() {
         }else if(buttonId.includes("Movies")){
             cart_array.push(product.Movies_array[numId]);
         }
-        $('.scroll').empty();
+        $('.cartItems').empty();
+        $('.scroll .empty').hide();
         addToCart(cart_array);
     });
 

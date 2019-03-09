@@ -222,7 +222,7 @@ body, .grid-container > section{
     border: 1px solid #77635c;
     background-color: inherit;
     position: absolute;
-    width: 50%;
+    width: 30%;
     right: -50%;
     right: 0%;
     z-index: 99999999999999999;
@@ -240,13 +240,13 @@ body, .grid-container > section{
     margin: 0 auto;
     display: none;
 }
-#cartPage section, .productPage section{
+.cartItems > li, .productPage section{
     flex-basis: 95%;
-    margin: 1rem;
+    margin: 1rem 2rem 1rem 0;
     border: 1px solid #77635c;
     display: flex;
     position: relative;
-    align-items: center;
+    align-items: flex-start;
     padding: 0.5rem;
     background-color: #F9EFF0;
 }
@@ -257,25 +257,32 @@ body, .grid-container > section{
 #cartPage h2{
     padding: 1rem;
 }
-.scroll p{
+.scroll .empty{
     text-align: center;
 }
-#cartPage section img, .productPage section img{
-    flex-basis: 20%;
-    height: 11.5rem; 
+.scroll p{
+    padding: 0 3rem;
+    font-weight: 800;
 }
-#cartPage section ul, .productPage section ul{
+.scroll span{
+    float: right;
+}
+.cartItems > li img, .productPage section img{
+    flex-basis: 20%;
+    height: 5.5rem; 
+}
+.cartItems > li ul, .productPage section ul{
     list-style: none;
     flex-basis: 75%;
 }
-#cartPage section li:last-child, .productPage section li:last-child{
+.cartItems > li li:last-child, .productPage section li:last-child{
     float: right;
-    margin: 1rem 2rem 0 0;
+    margin-top: 1rem;
 }
-#cartPage section li:first-child, .productPage section li:first-child{
+.cartItems > li li:first-child, .productPage section li:first-child{
     font-weight: bold;
 }
-#cartPage section li:nth-child(2), .productPage section li:nth-child(2){
+.cartItems > li li:nth-child(2), .productPage section li:nth-child(2){
     font-weight: 400;
     font-size: 12px;
 }
