@@ -64,7 +64,7 @@ $('.cart-icon').click(function(event) {
             "name": "Right Time",
             "photo": "https://marketplace.canva.com/MACGp9_jvD0/2/0/thumbnail_large/canva-cityscape-buildings-movie-poster-MACGp9_jvD0.jpg",
             "category":"Movies",
-            "info":"After her ailing mother wanders off during a blizzard, Bridget returns to her childhood home in Chicago, accompanied by her rebellious daughter. Forced to referee between her father's stubborn insistence that his wife remains at home and her equally determined brother's efforts to place her in a memory carefacility.",
+            "info":"Bridget returns to her childhood home in Chicago, accompanied by her rebellious daughter. Forced to referee between her father's stubborn insistence that his wife remains at home and her equally determined brother's efforts to place her in a memory carefacility.",
             "price": 50
         },{
             "id": "movie_3",
@@ -177,15 +177,15 @@ $('.cart-icon').click(function(event) {
    //      addToCart(cart_array);
    //  });
        $('.buy').click(function(event) {
-        var parentId = $(this).closest("section").attr('id');
-        var liId="cart"+parentId;
+        var parentSection = $(this).closest("section").attr('id');
+        var liId="cart"+parentSection;
         $('.cartItems').append('<li><img /><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul></li>');
         $('.cartItems  li:last-child').attr('id',liId);
-        $('#'+liId+' img').attr('src',$('#'+parentId+" img").attr('src'));
-        $('#'+liId+' .name').text($('#'+parentId+" .name").text());
-        $('#'+liId+' .category').text($('#'+parentId+" .category").text());
-        $('#'+liId+' .price').text($('#'+parentId+" .price span").text()+" EGP");
-        var itemPrice=+$('#'+parentId+" .price span").text();
+        $('#'+liId+' img').attr('src',$('#'+parentSection+" img").attr('src'));
+        $('#'+liId+' .name').text($('#'+parentSection+" .name").text());
+        $('#'+liId+' .category').text($('#'+parentSection+" .category").text());
+        $('#'+liId+' .price').text($('#'+parentSection+" .price span").text()+" EGP");
+        var itemPrice=+$('#'+parentSection+" .price span").text();
         total+=itemPrice;
         $('.scroll span').text(total+" EGP");
         $('.scroll .empty').hide();
@@ -200,7 +200,7 @@ $('.cart-icon').click(function(event) {
         $('#productId .category').text($('#'+parentSection+" .category").text());
         $('#productId .summary').text($('#'+parentSection+" .info").text());
         $('#productId .price').text($('#'+parentSection+" .price").text()); 
-        $('#productId  .buy').attr('id','p'+parentSection); 
+        $('#productId  .buy').attr('id','productt'+parentSection); 
         $('#productPage').show();       
     });
     $('#close').click(function(event) {
