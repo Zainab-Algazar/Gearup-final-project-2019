@@ -225,7 +225,7 @@ body, .grid-container > section{
     width: 30%;
     right: -50%;
     right: 0%;
-    z-index: 99999999999999999;
+    z-index: 3;
     display: none;
 }
 .scroll{
@@ -234,13 +234,18 @@ body, .grid-container > section{
     -webkit-overflow-scrolling: touch;
     height: 100%;
 }
-.productPage{
+#productPage{
     width: 60%;
-    border: 1px solid #77635c;
+    /*background-color: inherit;
+    border: 1px solid #77635c;*/
     margin: 0 auto;
     display: none;
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    z-index: 5;
 }
-.cartItems > li, .productPage section{
+.cartItems > li, #productPage section{
     flex-basis: 95%;
     margin: 1rem 2rem 1rem 0;
     border: 1px solid #77635c;
@@ -250,9 +255,12 @@ body, .grid-container > section{
     padding: 0.5rem;
     background-color: #F9EFF0;
 }
-.productPage section{
-     flex-wrap: wrap;
-     justify-content:flex-end;
+#productPage section{
+    flex-wrap: wrap;
+    /*justify-content:flex-end;*/
+    align-items: center;
+    flex-basis: 95%;
+    margin: 1rem 2rem;
 }
 #cartPage h2{
     padding: 1rem;
@@ -267,25 +275,42 @@ body, .grid-container > section{
 .scroll span{
     float: right;
 }
-.cartItems > li img, .productPage section img{
+.cartItems > li img{
     flex-basis: 20%;
     height: 5.5rem; 
 }
-.cartItems > li ul, .productPage section ul{
-    list-style: none;
-    flex-basis: 75%;
+#productPage section img{
+    flex-basis: 20%;
+    height: 11.5rem;
 }
-.cartItems > li li:last-child, .productPage section li:last-child{
+#productPage button{
+    margin-left: 30rem;
+}
+.cartItems > li ul, #productPage section ul{
+    list-style: none;
+    flex-basis: 70%;
+}
+.cartItems > li li:last-child, #productPage section li:last-child{
     float: right;
     margin-top: 1rem;
 }
-.cartItems > li li:first-child, .productPage section li:first-child{
+.cartItems > li li:first-child, #productPage section li:first-child{
     font-weight: bold;
 }
-.cartItems > li li:nth-child(2), .productPage section li:nth-child(2){
+.cartItems > li li:nth-child(2), #productPage section li:nth-child(2){
     font-weight: 400;
     font-size: 12px;
 }
-.productPage section button{
-
+.info{
+    display: none;
+}
+#close{
+    width: 30px;
+    position: absolute;
+    top: 0.1rem;
+    right: 1rem;
+    z-index: 10;
+}
+#productPage .price{
+    font-weight: bold;
 }
