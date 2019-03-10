@@ -176,7 +176,7 @@ $('.cart-icon').click(function(event) {
    //      $('.scroll .empty').hide();
    //      addToCart(cart_array);
    //  });
-       $('.buy').click(function(event) {
+       $('body').on('click', '.buy', function(e) {
         var parentSection = $(this).closest("section").attr('id');
         var liId="cart"+parentSection;
         $('.cartItems').append('<li><img /><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul></li>');
@@ -194,13 +194,13 @@ $('.cart-icon').click(function(event) {
     $('.details').click(function(event) {
         $('#productId').empty();
         var parentSection = $(this).closest("section").attr('id');
-        $('#productId').append('<img/><ul><li class="name"></li><li class="category"></li><li class="summary"></li><li class="price"></li></ul><button type="button" class="buy">Add To Cart</button>')
+        $('#productId  .buy').attr('id','productt'+parentSection); 
+        $('#productId').append('<img/><ul><li class="name"></li><li class="category"></li><li class="summary"></li><li class="price"><span></span> EGP</li></ul><button type="button" class="buy">Add To Cart</button>');
         $('#productId img').attr('src',$('#'+parentSection+" img").attr('src'));
         $('#productId .name').text($('#'+parentSection+" .name").text());
         $('#productId .category').text($('#'+parentSection+" .category").text());
         $('#productId .summary').text($('#'+parentSection+" .info").text());
-        $('#productId .price').text($('#'+parentSection+" .price").text()); 
-        $('#productId  .buy').attr('id','productt'+parentSection); 
+        $('#productId .price span').text($('#'+parentSection+" .price span").text()); 
         $('#productPage').show();       
     });
     $('#close').click(function(event) {
