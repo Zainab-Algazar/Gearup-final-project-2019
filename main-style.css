@@ -1,23 +1,25 @@
 /* we use both bootstrap & our own styling*/
 html{
     box-sizing: border-box;
-    left: 0%;
-    position: relative;
-    overflow-x: hidden;
 }
 *{
     box-sizing: inherit;
 }
 header,.grid-container .details:hover , .buy:hover, footer,h2{
-    background-color:#f0cfc6;
+    background-color:#f0cfc6; /*pink*/
 }
-body, a,#cartPage section{
-    color: #77635c;
+.grid-container .details, .cartItems > li, #productPage section{
+    background-color: rgba(249,239,240,1); /*light pink*/
+}
+body, .grid-container, .grid-container > section, #cartPage{
+    background-color: #FDF9F6; /*off white*/
+}
+body, a,#cartPage li{
+    color: #77635c; /*brown*/
 }
 body, .grid-container > section{
 	margin: 0;
 }
-
 body, .grid-container > section, footer ul{
     padding: 0; 
 }
@@ -27,45 +29,46 @@ header,.grid-container section img, footer{
 body>header{
     position: sticky;
     top: 0;
-    z-index: 10;
-    padding-top: 20px;
-}
-h1, .searchbar-style  /*we will use javascript to display the search box*/{
-    display: none;
+    z-index: 1;
+    padding-top: 1.25rem;
 }
 header img{
-    height: 55px;
-    width: 120px;
-    margin: 0 20px 20px 20px;
-    padding-left: 10px;
+    height: 3.4375rem;
+    width: 7.5rem;
+    margin: 0 1.25rem 1.25rem 1.25rem;
+    padding-left: 0.625rem;
 }
 ul{
     list-style-type: none;  
 }
+body>header ul, #cartPage{
+    right: 0;
+}
 body>header ul{
-    /* display: flex to set the header navbar horizontally not vertically*/
-    display: flex;
+    display: flex; /* display: flex to set the header navbar horizontally not vertically*/
     justify-content: flex-end; /*to move the header nav bar to right*/
-    top: 27px;
-    right: 0; 
-    margin: 20px 30px;
+    top: 1.6875rem; 
+    margin: 1.25rem 1.875rem;
 }
 body>header ul .link-style{
-    margin-left: 13px;
-    padding-top: 35px;
+    margin-left: 0.8125rem;
+    padding-top: 2.1875rem;
 }
-.search-icon, .login-icon,.cart-icon, .grid-container  section{
+html, .search-icon, .login-icon,.cart-icon, .grid-container  section, .cartItems > li, #productPage section{
     position: relative;
 }
-header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overlay{
+header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overlay, #close{
     position: absolute;
+}
+#productPage, #cartPage{
+    position: fixed;
 }
 .search-icon::before, .login-icon::before,.cart-icon::before {
     font-family: "Font Awesome 5 Free"; 
     font-weight: 900;
-    top: 8px;
-    left: 10px;
-    font-size: 22px;
+    top: 0.5rem;
+    left: 0.625rem;
+    font-size: 1.375rem;
 }
 .search-icon::before{
     content: "\f002"
@@ -75,7 +78,7 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 }
 .cart-icon::before {
     content: "\f07a";
-    left: 2px;
+    left: 0.125rem;
 }
 .search-icon:hover, .login-icon:hover,.cart-icon:hover, a:hover ,button:hover{
     color: black;
@@ -85,12 +88,12 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     display: inline-block;
 }
 #searchbar, .custom-select{
-    margin: 3px;
+    margin: 0.1875rem;
     vertical-align: middle;
 }
 .searchbar-style{
-    height: 80px;
-    margin-left: 280px;
+    height: 5rem;
+    margin-left: 17.5rem;
 }
 .select-style{
     width: 20%;
@@ -101,19 +104,16 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 /*responsive search box*/
 @media screen and (max-width: 744px) {
     .searchbar-style{
-        margin-left: 100px;
+        margin-left: 6.25rem;
     }
 }
 @media screen and (max-width: 569px) {
     .searchbar-style{
-        margin-left: 50px;  
+        margin-left: 3.125rem;  
     }
     #searchbar{
         width: 60%;
     }
-}
-body, .grid-container > section{
-	background-color: #FDF9F6;
 }
 .mainPage{
     margin-bottom: 5%;
@@ -124,15 +124,13 @@ body, .grid-container > section{
 	grid-template-columns: 17.5rem 17.5rem 17.5rem;
   	justify-content: center;
   	margin: 2% auto;
-  	grid-column-gap: 10px;
-	grid-row-gap: 15px;
-  	background-color:inherit;
+  	grid-column-gap: 0.625rem;
+	grid-row-gap: 0.9375rem;
   	grid-auto-rows: 18.75rem;
 }
 .grid-container  section{
 	border: 0.0625rem solid rgb(240,207,198);
 	border-radius: 0.25rem;  
-	background-color:inherit;
 }
 /*responsive grid system*/
 @media screen and (max-width: 1000px) {
@@ -181,20 +179,18 @@ body, .grid-container > section{
 }
 .grid-container .details {
 	display: block;
-	background-color: rgba(249,239,240,1);
   	font-size: 1rem;
  	padding: 0.625rem;
  	margin: 0.625rem 1.25rem;
- 	border-radius: 7px;
 }
 .buy, #cartPage a {
 	background-color: rgb(242, 106, 131);
 	color: white;
-    font-weight: bold;
     padding: 0.5rem;
-    width: 14.9rem; 
-    border-radius: 7px; 
-    /*display: block;  */
+    width: 14.9rem;  
+}
+.buy, #cartPage a, .grid-container .details{
+    border-radius: 0.4375rem;
 }
 #cartPage a{
     display: block;
@@ -208,56 +204,43 @@ body, .grid-container > section{
 }
 .nav-footer-col{
     vertical-align: top;
-    padding:10px 0 0 100px;
+    padding:0.625rem 0 0 6.25rem;
 }
 .nav-footer-col p{
-    padding-left: 420px;
+    padding-left: 26.25rem;
 }
 .main-footer-style h3{
-    font-size: 20px;
-    margin-bottom: 7px;
+    font-size: 1.25rem;
+    margin-bottom: 0.4375rem;
 }
-
 #cartPage{
-    border: 1px solid #77635c;
-    background-color: inherit;
-    position: absolute;
     width: 30%;
-    right: -50%;
-    right: 0%;
-    z-index: 3;
-    display: none;
+    height: 87%;
+    z-index: 2;
 }
 .scroll{
-    /*position: fixed;*/
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
+    overflow: auto;
+    height: 77%;
 }
 #productPage{
     width: 60%;
-    /*background-color: inherit;
-    border: 1px solid #77635c;*/
     margin: 0 auto;
-    display: none;
-    position: fixed;
     top: 25%;
     left: 20%;
-    z-index: 5;
+    z-index: 3;
+}
+.cartItems > li, #productPage section, #cartPage{
+    border: 1px solid #77635c;
 }
 .cartItems > li, #productPage section{
     flex-basis: 95%;
     margin: 1rem 2rem 1rem 0;
-    border: 1px solid #77635c;
     display: flex;
-    position: relative;
     align-items: flex-start;
     padding: 0.5rem;
-    background-color: #F9EFF0;
 }
 #productPage section{
     flex-wrap: wrap;
-    /*justify-content:flex-end;*/
     align-items: center;
     flex-basis: 95%;
     margin: 1rem 2rem;
@@ -270,47 +253,42 @@ body, .grid-container > section{
 }
 .scroll p{
     padding: 0 3rem;
-    font-weight: 800;
 }
 .scroll span{
     float: right;
 }
-.cartItems > li img{
+.cartItems > li img, #productPage section img{
     flex-basis: 20%;
-    height: 5.5rem; 
+}
+.cartItems > li img{
+     height: 5.5rem; 
 }
 #productPage section img{
-    flex-basis: 20%;
     height: 11.5rem;
 }
 #productPage button{
     margin-left: 30rem;
 }
 .cartItems > li ul, #productPage section ul{
-    list-style: none;
     flex-basis: 70%;
 }
 .cartItems > li li:last-child, #productPage section li:last-child{
     float: right;
     margin-top: 1rem;
 }
-.cartItems > li li:first-child, #productPage section li:first-child{
+.cartItems > li li:first-child, #productPage section li:first-child, #productPage .price, .scroll p, .buy, #cartPage a{
     font-weight: bold;
 }
 .cartItems > li li:nth-child(2), #productPage section li:nth-child(2){
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
-.info{
+.info, .total, #productPage, #cartPage, h1, .searchbar-style{
     display: none;
 }
 #close{
-    width: 30px;
-    position: absolute;
+    width: 1.875rem;
     top: 0.1rem;
     right: 1rem;
     z-index: 10;
-}
-#productPage .price{
-    font-weight: bold;
 }

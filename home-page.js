@@ -1,12 +1,14 @@
 //*to display search box*//
 $(document).ready(function(event){
     $(".search-icon").click(function(){
-    $(".searchbar-style").slideToggle("500");
+        $(".searchbar-style").slideToggle("500");
     });
-$('.cart-icon').click(function(event) {
-    $("#cartPage").slideToggle("500");
+    $('.cart-icon').click(function(event) {
+        $("#cartPage").slideToggle("500");
     });
-
+    $('#close').click(function(event) {
+        $('#productPage').hide();       
+    });
     var product = {
         "Albums_array": [{
             "id": "album_1",
@@ -80,21 +82,22 @@ $('.cart-icon').click(function(event) {
         $('.grid-container').append('<section ><img/><div class="overlay"><ul><li class="name"></li><li class="category"></li><li class="price"><span></span> EGP</li><li class="info"></li></ul> <a href="#productPage" class="details">More Details</a><button type="button" class="buy">Add To Cart</button></div></section>');
         $('.grid-container section:last-child').attr('id',a[j].id);
         $("#"+a[j].id).addClass(a[j].category);
-        $("#"+a[j].id+" img").attr('src', a[j].photo);
+        $("#"+a[j].id+" img").attr('src', a[j].photo); //('#book_3 img')
         $("#"+a[j].id+" img").attr('alt',a[j].name+" poster");
         $("#"+a[j].id+" img").attr('title',a[j].name);
         $("#"+a[j].id+" .name").text(a[j].name);
         $("#"+a[j].id+" .category").text(a[j].category);
         $("#"+a[j].id+" .info").text(a[j].info);
-        $("#"+a[j].id+" .price span").text(a[j].price );
+        $("#"+a[j].id+" .price span").text(a[j].price ); //i made it span to keep it a number and use it in total calculation
         $("#"+a[j].id+" .buy").attr('id',a[j].category+j);
         $("#"+a[j].id+" .details").attr('id',a[j].id+j);
-        }
+        };
     };
-        addToPage(product.Albums_array);
-        addToPage(product.Books_array);
-        addToPage(product.Movies_array);
-    
+
+    addToPage(product.Albums_array); 
+    addToPage(product.Books_array);
+    addToPage(product.Movies_array);
+    //make the options in filter more dynamic
     var productList = ["All", "Albums", "Books","Movies"];
     var j=1;
     for (var i = 0; i < productList.length; i++) {
@@ -102,81 +105,50 @@ $('.cart-icon').click(function(event) {
            $('select option:last-child').attr('value',j);
            $('select option:last-child').text(productList[i]);
           j+=1;
-    }
+    };
+
     $("#searchbar").on("keyup", function(event){
-      var userInput= $(event.target).val().toUpperCase();
-      var searchArray=[];
-      for(var key in product){
-        for(var i=0;i<product[key].length;i++){
-            var nameOfPuoduct= product[key][i]["name"].toUpperCase();
-            if(nameOfPuoduct.includes(userInput)){
-                $('.grid-container').empty();
-                searchArray.push(product[key][i]);
-                addToPage(searchArray);
-            }else if(userInput===""){
-                $('.grid-container section').show();
-            // }else{
-            //     $('.grid-container').empty();
-            //     $('.grid-container').text('no results for what you search');
+        var userInput= $(event.target).val().toUpperCase();
+        var searchArray=[];
+        for(var key in product){
+            for(var i=0;i<product[key].length;i++){
+                var nameOfPuoduct= product[key][i]["name"].toUpperCase();
+                if(nameOfPuoduct.includes(userInput)){
+                    $('.grid-container').empty();
+                    searchArray.push(product[key][i]);
+                    addToPage(searchArray);
+                }else if(userInput===""){
+                    $('.grid-container section').show();
+                // }else{
+                //     $('.grid-container').empty();
+                //     $('.grid-container').text('no results for what you search');
+                };
             };
         };
-      };
-      
     });
     $("select").change (function(event){
-      var passOption= $(event.target).val();
-      switch(passOption){
-        case "1":
-            $('.grid-container .Albums, .grid-container .Books,.grid-container .Movies').show();
-            break;
-        case "2":
-            $('.grid-container .Albums').show();
-            $('.grid-container .Books, .grid-container .Movies').hide();
-            break;
-        case "3":
-            $('.grid-container .Books').show();
-            $('.grid-container .Albums, .grid-container .Movies').hide();
-            break;
-        case "4":
-            $('.grid-container .Movies').show();
-            $('.grid-container .Albums, .grid-container .Books').hide();
-            break;
-      };
+        var passOption= $(event.target).val();
+        switch(passOption){
+            case "1":
+                $('.grid-container .Albums, .grid-container .Books,.grid-container .Movies').show();
+                break;
+            case "2":
+                $('.grid-container .Albums').show();
+                $('.grid-container .Books, .grid-container .Movies').hide();
+                break;
+            case "3":
+                $('.grid-container .Books').show();
+                $('.grid-container .Albums, .grid-container .Movies').hide();
+                break;
+            case "4":
+                $('.grid-container .Movies').show();
+                $('.grid-container .Albums, .grid-container .Books').hide();
+                break;
+        };
     });
-
+    //addToCart function
    var total=0;
-   // var cart_array=[];
-   //  function addToCart(a){
-   //      total=0
-   //      for(var j=0; j< a.length;j++){
-   //      $('.cartItems').append('<li><img ><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul></li>');
-   //      $('.cartItems  li:last-child').attr('id','cart'+a[j].id);
-   //      $('#cart'+a[j].id+" img").attr('src', a[j].photo);
-   //      $('#cart'+a[j].id+" img").attr('alt',a[j].name+" poster");
-   //      $('#cart'+a[j].id+" img").attr('title',a[j].name);
-   //      $('#cart'+a[j].id+" .name").text(a[j].name);
-   //      $('#cart'+a[j].id+" .category").text(a[j].category);
-   //      $('#cart'+a[j].id+" .price").text(a[j].price + " EGP");
-   //      total+=a[j].price;
-   //      $('.scroll span').text(total+" EGP");
-   //      }
-   //  };
-        
-   //  $('.buy').click(function(event) {
-   //      var buttonId=this.id;
-   //      var numId=buttonId.replace(/['Albums Books Movies"]+/g, '')
-   //      if(buttonId.includes("Albums")){
-   //          cart_array.push(product.Albums_array[numId]);
-   //      }else if(buttonId.includes("Books")){
-   //          cart_array.push(product.Books_array[numId]);
-   //      }else if(buttonId.includes("Movies")){
-   //          cart_array.push(product.Movies_array[numId]);
-   //      }
-   //      $('.cartItems').empty();
-   //      $('.scroll .empty').hide();
-   //      addToCart(cart_array);
-   //  });
-       $('body').on('click', '.buy', function(e) {
+   $('body').on('click', '.buy', function(e) {
         var parentSection = $(this).closest("section").attr('id');
         var liId="cart"+parentSection;
         $('.cartItems').append('<li><img /><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul></li>');
@@ -189,21 +161,20 @@ $('.cart-icon').click(function(event) {
         total+=itemPrice;
         $('.scroll span').text(total+" EGP");
         $('.scroll .empty').hide();
+        $('.scroll .total').show();
     });
-
-    $('.details').click(function(event) {
-        $('#productId').empty();
+   //product div content creation
+    $('body').on('click', '.details', function(e){
+        $('#productPage section').empty();
         var parentSection = $(this).closest("section").attr('id');
-        $('#productId  .buy').attr('id','productt'+parentSection); 
-        $('#productId').append('<img/><ul><li class="name"></li><li class="category"></li><li class="summary"></li><li class="price"><span></span> EGP</li></ul><button type="button" class="buy">Add To Cart</button>');
-        $('#productId img').attr('src',$('#'+parentSection+" img").attr('src'));
-        $('#productId .name').text($('#'+parentSection+" .name").text());
-        $('#productId .category').text($('#'+parentSection+" .category").text());
-        $('#productId .summary').text($('#'+parentSection+" .info").text());
-        $('#productId .price span').text($('#'+parentSection+" .price span").text()); 
+        $('#productPage section').attr('id','productId'+parentSection);
+        $('#productId'+parentSection+' .buy').attr('id','productt'+parentSection); 
+        $('#productId'+parentSection).append('<img/><ul><li class="name"></li><li class="category"></li><li class="summary"></li><li class="price"><span></span> EGP</li></ul><button type="button" class="buy">Add To Cart</button>');
+        $('#productId'+parentSection+' img').attr('src',$('#'+parentSection+" img").attr('src'));
+        $('#productId'+parentSection+' .name').text($('#'+parentSection+" .name").text());
+        $('#productId'+parentSection+' .category').text($('#'+parentSection+" .category").text());
+        $('#productId'+parentSection+' .summary').text($('#'+parentSection+" .info").text());
+        $('#productId'+parentSection+' .price span').text($('#'+parentSection+" .price span").text()); 
         $('#productPage').show();       
-    });
-    $('#close').click(function(event) {
-        $('#productPage').hide();       
     });
 });
