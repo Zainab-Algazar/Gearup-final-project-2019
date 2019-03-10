@@ -44,8 +44,10 @@ ul{
 body>header ul, #cartPage{
     right: 0;
 }
+body>header ul, .cartItems > li, #productPage section{
+     display: flex; /* display: flex to set the header navbar horizontally not vertically*/
+}
 body>header ul{
-    display: flex; /* display: flex to set the header navbar horizontally not vertically*/
     justify-content: flex-end; /*to move the header nav bar to right*/
     top: 1.6875rem; 
     margin: 1.25rem 1.875rem;
@@ -65,7 +67,6 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 }
 .search-icon::before, .login-icon::before,.cart-icon::before {
     font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
     top: 0.5rem;
     left: 0.625rem;
     font-size: 1.375rem;
@@ -101,23 +102,6 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 #searchbar{
     width: 50%
 }
-/*responsive search box*/
-@media screen and (max-width: 744px) {
-    .searchbar-style{
-        margin-left: 6.25rem;
-    }
-}
-@media screen and (max-width: 569px) {
-    .searchbar-style{
-        margin-left: 3.125rem;  
-    }
-    #searchbar{
-        width: 60%;
-    }
-}
-.mainPage{
-    margin-bottom: 5%;
-}
 .grid-container{
 	display: grid;
 	width: 80%;
@@ -132,20 +116,11 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 	border: 0.0625rem solid rgb(240,207,198);
 	border-radius: 0.25rem;  
 }
-/*responsive grid system*/
-@media screen and (max-width: 1000px) {
-    .grid-container {
-  	    grid-template-columns: auto auto;
-    }
-}
-@media screen and (max-width: 500px) {
-    .grid-container {
-  	    grid-template-columns: auto;
-    }
+.grid-container .details, .grid-container  section img, #cartPage a{
+    display:block;
 }
 .grid-container  section img{
     height: 100%;
-	display:block;
 	opacity: 1;
 	transition: .5s ease;
 	backface-visibility: hidden;
@@ -153,8 +128,8 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 .grid-container section:hover img{
 	opacity: 0.3;
 }
-.grid-container  section:hover {
-    box-shadow: 0 0 0.1875rem 0.125rem rgba(240,207,198,1);
+.grid-container  section:hover, .cartItems > li:hover, #productPage section:hover  {
+    box-shadow: 0 0 0.1875rem 0.125rem rgb(242, 106, 131);
 }
 .grid-container section:hover .overlay {
     opacity: 0.8;
@@ -167,7 +142,6 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	text-align: center;
 	background-color: #77635c;
 }
 .overlay ul{
@@ -178,8 +152,6 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 	color: #F9EFF0;
 }
 .grid-container .details {
-	display: block;
-  	font-size: 1rem;
  	padding: 0.625rem;
  	margin: 0.625rem 1.25rem;
 }
@@ -193,9 +165,7 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     border-radius: 0.4375rem;
 }
 #cartPage a{
-    display: block;
-    text-align: center;
-    margin: 1rem auto 0;
+    margin: 1rem auto;
 }
 .carousel-inner{
 	height: 22.625rem;
@@ -207,7 +177,9 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     padding:0.625rem 0 0 6.25rem;
 }
 .nav-footer-col p{
-    padding-left: 26.25rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
 }
 .main-footer-style h3{
     font-size: 1.25rem;
@@ -215,8 +187,9 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 }
 #cartPage{
     width: 30%;
-    height: 87%;
+    height: 85.8%;
     z-index: 2;
+    border-top: 0;
 }
 .scroll{
     overflow: auto;
@@ -225,7 +198,7 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 #productPage{
     width: 60%;
     margin: 0 auto;
-    top: 25%;
+    top: 24%;
     left: 20%;
     z-index: 3;
 }
@@ -235,26 +208,23 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 .cartItems > li, #productPage section{
     flex-basis: 95%;
     margin: 1rem 2rem 1rem 0;
-    display: flex;
-    align-items: flex-start;
     padding: 0.5rem;
 }
 #productPage section{
     flex-wrap: wrap;
     align-items: center;
-    flex-basis: 95%;
-    margin: 1rem 2rem;
+    flex-basis: 98%;
 }
-#cartPage h2{
+#cartPage h2, #productPage section{
     padding: 1rem;
 }
-.scroll .empty{
+.scroll .empty, .overlay, #cartPage a{
     text-align: center;
 }
 .scroll p{
     padding: 0 3rem;
 }
-.scroll span{
+.scroll span, .cartItems > li li:last-child, #productPage section li:last-child{
     float: right;
 }
 .cartItems > li img, #productPage section img{
@@ -267,21 +237,21 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
     height: 11.5rem;
 }
 #productPage button{
-    margin-left: 30rem;
+    position: absolute;
+    bottom: 1rem;
 }
 .cartItems > li ul, #productPage section ul{
     flex-basis: 70%;
 }
 .cartItems > li li:last-child, #productPage section li:last-child{
-    float: right;
     margin-top: 1rem;
 }
-.cartItems > li li:first-child, #productPage section li:first-child, #productPage .price, .scroll p, .buy, #cartPage a{
+.cartItems > li li:first-child, h3, #productPage section li:first-child, #productPage .price, .scroll p, .buy, #cartPage a, .search-icon::before, .login-icon::before,.cart-icon::before{
     font-weight: bold;
 }
 .cartItems > li li:nth-child(2), #productPage section li:nth-child(2){
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 .info, .total, #productPage, #cartPage, h1, .searchbar-style{
     display: none;
@@ -289,6 +259,36 @@ header ul, .search-icon::before, .login-icon::before,.cart-icon::before, .overla
 #close{
     width: 1.875rem;
     top: 0.1rem;
-    right: 1rem;
     z-index: 10;
+}
+#productPage button, #close{
+    right: 1rem;
+}
+@media only screen and (max-width: 1000px && min-width: 501px) {
+    .grid-container {
+        grid-template-columns: auto auto; /*responsive grid system*/
+    }
+    .nav-footer-col p {
+        position: static;
+    }
+    .nav-footer-col{
+    padding:0.5rem 0 0 6.25rem;
+    }
+}
+@media only screen and (max-width: 744px) {
+    .searchbar-style{
+        margin-left: 6.25rem;
+    }
+}
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .searchbar-style{
+        margin-left: 3.125rem;  
+    }
+    #searchbar{
+        width: 60%;
+    }
+    .grid-container {
+        grid-template-columns: auto; /*responsive grid system*/
+    }
 }
