@@ -119,9 +119,9 @@ $(document).ready(function(event){
                     addToPage(searchArray);
                 }else if(userInput===""){
                     $('.grid-container section').show();
-                // }else{
+                // }else if(!nameOfPuoduct.includes(userInput)){
                 //     $('.grid-container').empty();
-                //     $('.grid-container').text('no results for what you search');
+                //     $('.grid-container').append('<p>no results for what you search</p>').css({'font': 'bold 20px/30px Georgia, serif ','text-align': 'center','grid-column':'1 / 5'});
                 };
             };
         };
@@ -149,6 +149,8 @@ $(document).ready(function(event){
     //addToCart function
    var total=0;
    $('body').on('click', '.buy', function(e) {
+        // $(this).prop('disabled','true');
+        // $(this).css({'backgroundColor':'grey','color':'black'});
         var parentSection = $(this).closest("section").attr('id');
         var liId="cart"+parentSection;
         $('.cartItems').append('<li><img /><ul><li class="name"></li><li class="category"></li><li class="price"></li></ul></li>');
